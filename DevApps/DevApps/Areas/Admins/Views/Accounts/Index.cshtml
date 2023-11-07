@@ -1,0 +1,241 @@
+﻿@{
+    ViewBag.Title = "Quản lý tài khoản";
+    Layout = "~/Areas/Admins/Views/Shared/_LayoutAdmins.cshtml";
+}
+<div class="show-table">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+                @Html.Partial("_Index")
+            </div>   
+            <div class="col-md-4 p-2">
+                @Html.Partial("_AddOrEdit")
+            </div>   
+        </div>
+    </div>
+</div>
+@section scripts{
+    <script>
+        var itemInfor = new Object();
+        
+        pageSize = 15;
+        $.ajax({
+            url: '/Admins/Accounts/GetDataJSON',
+            type: 'POST',
+            dataType: 'json',
+            data: {
+
+            },
+            beforeSend: function () {
+
+            },
+            success: function (res) {
+                data = res;
+                dataFilter = res;
+                updatePageCount(dataFilter.length, pageSize);
+                setPagination(pageCount, 1);
+                setPagingDataHtml(pageSize, 1);
+                let count = data.length;
+                $('#record-count').html(`Tổng số có:<span class="btn-tools btn-red">${count}</span> tài khoản`);
+            },
+            error: function () {
+
+            },
+            complete: function () {
+
+            }
+        })
+        setSelectDisplay();
+        function setDataHtml(obj, stt) {
+            let rowStatus = '<span class="text-success">Hoạt động</span>';
+            let ngayTao = (new Date(parseInt(obj.NGAY_TAO.substr(6)))).toLocaleDateString();
+            if (obj.TRANG_THAI != 1) {
+                rowStatus = '<span class="text-danger"> Đang khóa </span>';
+            }
+            let row = `<tr data-id="${obj.ID}" class="btnRowClick">
+                            <td class="text-right">${stt}</td>
+                            <td>${obj.ACCOUNT}</td>
+                            <td>
+                                ${ngayTao}
+                            </td>
+                            <td>
+                                ${rowStatus}
+                            </td>
+                            <td>
+                                <div class="d-flex justify-content-end w-100">
+                                    <button class="btn-green btn-event" onclick="fillDataFormControl(${obj.ID})"><i class="fas fa-info-circle"></i> </button>
+                                    <button class="btn-yellow btn-event" onclick="fillDataFormControl(${obj.ID})"><i class="far fa-edit"></i> </button>
+                                    <button class="btn-red btn-event" role="button" onclick="deleteByID(${obj.ID})"><i class="far fa-trash-alt"></i> </button>
+                                </div>
+                            </td>
+                        </tr>`;
+            $('#myTable tbody').append(row);
+        }
+        function setListDataHtml(data, sttStart) {
+            $('#myTable tbody').html('');
+            let stt = sttStart;
+            $.each(data, function (index, item) {
+                setDataHtml(item, stt)
+                stt++;
+            })
+        }
+        function searchInput() {
+
+            $('.search input').change(function () {
+                let text = $(this).val();
+                text = text.trim();
+                dataFilter = data.filter(x => x.ACCOUNT.toLowerCase().includes(text.toLowerCase().trim()));
+                updatePageCount(dataFilter.length, pageSize);
+                setPagination(pageCount, 1);
+                setPagingDataHtml(pageSize, 1);
+            })
+            $('.search input').keyup(function (e) {
+                if (e.keyCode == 13) {
+                    let text = $(this).val();
+                    text = text.trim();
+                    dataFilter = data.filter(x => x.ACCOUNT.toLowerCase().includes(text.toLowerCase().trim()));
+                    updatePageCount(dataFilter.length, pageSize);
+                    setPagination(pageCount, 1);
+                    setPagingDataHtml(pageSize, 1);
+                }
+            });
+        }
+        searchInput();
+        function sortData(key, bool) {
+            dataFilter.sort((a, b) => {
+                let aKey = a[key];
+                let bKey = b[key];
+                if (bool == true) {
+                    return (aKey < bKey) ? -1 : ((aKey > bKey) ? 1 : 0);
+                } else {
+                    return (aKey < bKey) ? 1 : ((aKey > bKey) ? -1 : 0);
+                }
+            });
+        }
+    </script>
+
+    <script>
+        function deleteByID(id) {
+            swal({
+                title: "Xóa dữ liệu này?",
+                text: "Dữ liệu xóa sẽ không thể khôi phục!",
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
+            })
+            .then((willDelete) => {
+                if (willDelete) {
+                    $.ajax({
+                        url: "/Admins/Accounts/DeleteByID",
+                        type: 'POST',
+                        dataType: 'html',
+                        data: { id: id },
+                    })
+                        .done(function (res) {
+                            if (res == 1) {
+                                toastr.success('Đã xóa dữ liệu', 'Thông báo');
+                                LoadData(id);
+                            } else {
+                                toastr.success('Lỗi xử lý xóa dữ liệu', 'Thông báo');
+                            }
+                        })
+                        .fail(function () {
+
+                        })
+                        .always(function () {
+
+                        });
+                };
+            });
+        }
+
+        function LoadData(id) {
+            data = data.filter(x => x.ID !== id);
+            dataFilter = data.filter(x => x.ID !== id);
+            updatePageCount(dataFilter.length, pageSize);
+            setPagination(pageCount, 1);
+            setPagingDataHtml(pageSize, 1);
+            let count = data.length;
+            $('#record-count').html(`Tổng số có:<span class="btn-tools btn-red">${count}</span> tài khoản`);
+        }
+
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('.btnAdd').click(function () {
+                addNew();
+            });
+            $('.btnSave').click(function () {
+                save();
+            });
+            $('.btnRowClick').click(function () {
+                console.log($(this).attr('data-id'));
+                fillDataFormControl($(this).attr('data-id'));
+            });
+        });
+        function fillDataFormControl(id) {
+            dataControl = data.filter(x => x.ID == id);
+            $.each(dataControl, function (index, item) {
+                $.each(item, function (key, value) {
+                    if (key == "TRANG_THAI") {
+                        if (value == 1) {
+                            $(".objInfor input[name=TRANG_THAI][value='1']").prop('checked', true);
+                        } else {
+                            $(".objInfor input[name=TRANG_THAI][value='0']").prop('checked', true);
+                        }
+                    } else
+                        if (key == "NGAY_TAO" || key == "NGAY_SUA") {
+                            $(".objInfor input[name=" + key + "]").val((new Date(parseInt(value.substr(6)))).toLocaleDateString());
+                        } else {
+                            $(".objInfor input[name=" + key + "]").val(value);
+                        }
+                });
+            });
+        }
+
+        function addNew() {
+            $(".objInfor input[type=text]").each(function () {
+                $(this).val('');
+                itemInfor[$(this).attr('name')] = "";
+            });
+            $(".objInfor input[name=TRANG_THAI][value='1']").prop('checked', true);
+            itemInfor["TRANG_THAI"] = "";
+            $(".objInfor input[name=ID]").val("0");
+            itemInfor["ID"] = "0";
+        }
+
+        function save() {
+            $('.objInfor input[type="text"],.objInfor input[type="number"], .objInfor input[type="hidden"], .objInfor input[type="date"]').each(function () {
+                itemInfor[$(this).attr('name')] = $(this).val();
+            });
+            itemInfor["TRANG_THAI"] = $(".objInfor input[type=radio]").val();
+            console.log(itemInfor);
+            $.ajax({
+                url: '/Admins/Accounts/AddOrUpdate',
+                type: 'POST',
+                dataType: 'json',
+                data: {
+                    itemInfor: itemInfor
+                },
+                beforeSend: function () {
+
+                },
+                success: function (res) {
+                    data = res;
+                    dataFilter = res;
+                    updatePageCount(dataFilter.length, pageSize);
+                    setPagination(pageCount, 1);
+                    setPagingDataHtml(pageSize, 1);
+                    let count = data.length;
+                    $('#record-count').html(`Tổng số có:<span class="btn-tools btn-red">${count}</span> tài khoản`);
+                },
+                error: function () {
+
+                },
+                complete: function () {
+
+                }
+            });
+        }
+    </script>
+}

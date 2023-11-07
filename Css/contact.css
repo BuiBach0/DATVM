@@ -1,0 +1,35 @@
+.our-contact h1 {
+    position: absolute;
+    top : 80px;
+    left: 600px;
+    color: #fbf9f9;
+    text-align: center;
+}
+.our-contact p {
+    position: absolute;
+    font-size: 30px;
+    top: 150px;
+    color: #fbf9f9;
+}
+.banner-2{
+    position: relative;
+    text-align: center;
+}
+.Subscribe h1 {
+    position: absolute;
+    top : 80px;
+    left: 500px;
+    color: #fbf9f9;
+    text-align: center;
+}
+.Subscribe p {
+    position: absolute;
+    font-size: 30px;
+    top: 150px;
+    color: #fbf9f9;
+}
+.button{
+    width: 150px;
+    background-color: blue;
+    color: #fbf9f9;
+}

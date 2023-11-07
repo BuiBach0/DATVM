@@ -1,0 +1,360 @@
+﻿@model IEnumerable<DevApps.ModelsView.ModelsNews>
+@{
+    var bannerUS = ViewBag.BannerUs as IEnumerable<DevApps.Models.BANNER>;
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var stt = 1;
+}
+@if ((int)Session["language"] == 1)
+{
+    <section class="dev-work container">
+        <div class="the-first ">
+            <div class="row">
+                @foreach (var item in bannerUS)
+                {
+                    if (item.ORDER == 4)
+                    {
+                        <div class="col-lg-6">
+                            <div class="work-top">
+                                <div class="our-work-h">
+                                    <h2>@item.TITLE</h2>
+                                </div>
+                                <div class="our-work-ct">
+
+                                    <p>
+
+                                        @item.DESCRIPTION
+                                    </p>
+                                </div>
+                                <div class="our-work-btn">
+                                    <button class="btn">
+                                        Contact Us
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="our-work-img">
+                                <img src="@item.IMAGE" class="w-100" alt="w1" />
+                            </div>
+                        </div>
+                    }
+                }
+
+            </div>
+        </div>
+        @foreach (var item in Model)
+        {
+            if (stt == 1)
+            {
+                <div class="recent">
+                    <div class="h-recent">
+                        <h2 class="text-center">@item.cate.TITLE</h2>
+                    </div>
+                    <div class="">
+                        <div class="row">
+                            @foreach (var val in item.news)
+                            {
+                                <div class="col-6 col-lg-4">
+                                    <div class="recent-img">
+                                        <img src="@val.IMAGE" alt="@val.TITLE" class="w-100" />
+                                    </div>
+                                    <div class="recent-title">
+                                        <h6>@val.SUB_TITLE</h6>
+                                    </div>
+                                    <div class="recent-detail ">
+                                        <p>
+                                            @val.TITLE
+                                        </p>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                    <div class="our-work-btn text-center">
+                        <button class="btn load-more">
+                            LOAD MORE
+                        </button>
+                    </div>
+                </div>
+            }
+            if (stt == 2)
+            {
+                <div class="proprietary">
+                    <div class="propri-h">
+                        <h2 class="text-center">@item.cate.TITLE</h2>
+                    </div>
+                    <div class="row">
+                        @foreach (var val in item.news)
+                        {
+                            <div class="col-6 col-lg-3">
+                                <div class="propri-img">
+                                    <div class="position-relative">
+                                        <img src="@val.IMAGE" class="w-100 show-infor" alt="@val.TITLE" />
+
+                                        <div class="position-absolute contact-us text-left">
+                                            <div class="position-absolute">
+                                                <h5>For more information</h5>
+                                                <div class="contact-now d-flex">
+                                                    <a href="#">Contact Us</a>
+                                                    <a href="#" title="link">
+                                                        <img src="~/Content/images/HOMEPAGE/button-shape.png" class=" ml-3" alt="mt" />
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="propri-detail text-center">
+                                        <p>
+                                            @val.TITLE
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        }
+                    </div>
+
+                </div>
+            }
+            if (stt == 3)
+            {
+                <div class="get">
+                    <div class="get-h">
+                        <h3 class="text-center">
+                            @item.cate.TITLE
+                        </h3>
+                    </div>
+                    <form class="objInfor">
+                        <div class="row ">
+                            <div class="col-6">
+                                <input type="text" name="NAME" value="" placeholder="Name" class="align-items-center text-left pl-3 w-100 " />
+                            </div>
+                            <div class="col-6">
+                                <input type="text" name="PHONE" value="" placeholder="Phone" class="align-items-center text-left pl-3 w-100" />
+                            </div>
+                            <div class="col-6">
+                                <input type="text" name="COMPANY" value="" placeholder="Company" class="align-items-center text-left pl-3 w-100" />
+                            </div>
+                            <div class="col-6">
+                                <input type="text" name="EMAIL" value="" placeholder="Email" class="align-items-center text-left pl-3 w-100" />
+                            </div>
+                            <div class="col-12 inh">
+                                <textarea id="w3review" name="DESCRIPTIONS" class="w-100"> Tell us about your requirement
+                            </textarea>
+                            </div>
+                            <div class="send d-flex">
+                                <input type="checkbox" name="Send" value="" />
+                                <span class="ml-1 get-note"> Send me the signed Non-Disclosure Agreement (NDA)</span>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-get w-100 btn-send-inf">
+                                    Get an astimate
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            }
+            stt++;
+        }
+
+    </section>
+}
+else
+{
+    <section class="dev-work container">
+        <div class="the-first ">
+            <div class="row">
+                @foreach (var item in bannerUS)
+                {
+                    if (item.ORDER == 4)
+                    {
+                        <div class="col-lg-6">
+                            <div class="work-top">
+                                <div class="our-work-h">
+                                    <h2>@item.TITLE_EN</h2>
+                                </div>
+                                <div class="our-work-ct">
+                                    <p>
+                                        @item.DESCRIPTION_EN
+                                    </p>
+                                </div>
+                                <div class="our-work-btn">
+                                    <button class="btn">
+                                        Liên Hệ
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="our-work-img">
+                                <img src="@item.IMAGE" class="w-100" alt="@item.TITLE_EN" />
+                            </div>
+                        </div>
+                    }
+                }
+
+            </div>
+        </div>
+        @foreach (var item in Model)
+        {
+            if (stt == 1)
+            {
+                <div class="recent">
+                    <div class="h-recent">
+                        <h2 class="text-center">@item.cate.TITLE_EN</h2>
+                    </div>
+                    <div class="">
+                        <div class="row">
+                            @foreach (var val in item.news)
+                            {
+                                <div class="col-6 col-lg-4">
+                                    <div class="recent-img">
+                                        <img src="@val.IMAGE" alt="@val.TITLE_EN" class="w-100" />
+                                    </div>
+                                    <div class="recent-title">
+                                        <h6>@val.SUB_TITLE_EN</h6>
+                                    </div>
+                                    <div class="recent-detail ">
+                                        <p>
+                                            @val.TITLE_EN
+                                        </p>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                    <div class="our-work-btn text-center">
+                        <button class="btn load-more">
+                            ĐỌC THÊM
+                        </button>
+                    </div>
+                </div>
+            }
+            if (stt == 2)
+            {
+                <div class="proprietary">
+                    <div class="propri-h">
+                        <h2 class="text-center">@item.cate.TITLE_EN</h2>
+                    </div>
+                    <div class="row">
+                        @foreach (var val in item.news)
+                        {
+                            <div class="col-6 col-lg-3">
+                                <div class="propri-img">
+                                    <div class="position-relative">
+                                        <img src="@val.IMAGE" class="w-100 show-infor" alt="@val.TITLE_EN" />
+
+                                        <div class="position-absolute contact-us text-left">
+                                            <div class="position-absolute">
+                                                <h5>Nhiều thông tin hơn</h5>
+                                                <div class="contact-now d-flex">
+                                                    <a href="#">Kết Nối Ngay</a>
+                                                    <a href="#" title="link">
+                                                        <img src="~/Content/images/HOMEPAGE/button-shape.png" class=" ml-3" alt="mt" />
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="propri-detail text-center">
+                                        <p>
+                                            @val.TITLE_EN
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        }
+                    </div>
+
+                </div>
+            }
+            if (stt == 3)
+            {
+                <div class="get">
+                    <div class="get-h">
+                        <h3 class="text-center">
+                            @item.cate.TITLE_EN
+                        </h3>
+                    </div>
+                    <form class="objInfor">
+                        <div class="row ">
+                            <div class="col-6">
+                                <input type="text" name="NAME" value="" placeholder="Họ Tên" class="align-items-center text-left pl-3 w-100 " />
+                            </div>
+                            <div class="col-6">
+                                <input type="text" name="PHONE" value="" placeholder="Số Điện Thoại" class="align-items-center text-left pl-3 w-100" />
+                            </div>
+                            <div class="col-6">
+                                <input type="text" name="COMPANY" value="" placeholder="Công ty" class="align-items-center text-left pl-3 w-100" />
+                            </div>
+                            <div class="col-6">
+                                <input type="text" name="EMAIL" value="" placeholder="Email" class="align-items-center text-left pl-3 w-100" />
+                            </div>
+                            <div class="col-12 inh">
+                                <textarea id="w3review" name="DESCRIPTIONS" class="w-100"  placeholder="Chia sẻ với chúng tôi">
+                            </textarea>
+                            </div>
+                            <div class="send d-flex">
+                                <input type="checkbox" name="Send" value="" />
+                                <span class="ml-1 get-note"> Đồng ý với điều kiện bảo mật của chúng tôi (NDA) đã ký</span>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-get w-100 btn-send-inf">
+                                    Gửi ý kiến
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            }
+            stt++;
+        }
+
+    </section>
+}
+
+@section scripts{
+
+    <script>
+        function AddOrEdit() {
+            let objArr = $('.objInfor').serializeArray();
+            console.log(objArr);
+            let obj = objArr.reduce(function (o, val) { o[val.name] = val.value; return o }, {});
+
+            console.log(obj);
+            debugger;
+            $.ajax({
+                url: '/works/addorupdate',
+                type: 'post',
+                datatype: 'json',
+                data: obj,
+                beforesend: function () {
+
+                },
+                success: function (res) {
+                    alert("success")
+                },
+                error: function () {
+
+                },
+                complete: function () {
+
+                }
+            })
+        };
+        $(document).on('click', '.btn-send-inf', function () {
+            $('.objInfor input').val();
+            AddOrEdit();
+        });
+                    //$(document).on('click', '.btn-send-inf', function () {
+                    //    $('.objInfor input').val('');
+                    //    $('.objInfor textarea').val('');
+                    //    $('.objInfor input[name="ID"]').val(0);
+                    //});
+
+    </script>
+
+}

@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BLOCKCHAINModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ADMIN_USER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ACCOUNT" Type="nvarchar" MaxLength="200" />
+    <Property Name="PASSWORD" Type="nvarchar" MaxLength="200" />
+    <Property Name="MA_NHAN_SU" Type="int" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="100" />
+    <Property Name="PHONE" Type="nvarchar" MaxLength="30" />
+    <Property Name="EMAIL" Type="nvarchar" MaxLength="500" />
+    <Property Name="AVATAR" Type="nvarchar" MaxLength="200" />
+    <Property Name="ID_PHONG_BAN" Type="int" />
+    <Property Name="NGAY_TAO" Type="datetime" />
+    <Property Name="NGUOI_TAO" Type="nvarchar" MaxLength="200" />
+    <Property Name="NGAY_CAP_NHAT" Type="datetime" />
+    <Property Name="NGUOI_CAP_NHAT" Type="nvarchar" MaxLength="200" />
+    <Property Name="SESSION_TOKEN" Type="nvarchar" MaxLength="500" />
+    <Property Name="SALT" Type="char" MaxLength="3" />
+    <Property Name="IS_ADMIN" Type="bit" />
+    <Property Name="TRANG_THAI" Type="int" />
+    <Property Name="IS_DELETE" Type="bit" />
+  </EntityType>
+  <EntityType Name="BANNER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TITLE" Type="nvarchar" MaxLength="300" />
+    <Property Name="TITLE_EN" Type="nvarchar" MaxLength="300" />
+    <Property Name="SLUG" Type="nvarchar" MaxLength="300" />
+    <Property Name="SLUG_EN" Type="nvarchar" MaxLength="300" />
+    <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="500" />
+    <Property Name="DESCRIPTION_EN" Type="nvarchar" MaxLength="500" />
+    <Property Name="POSITION" Type="int" />
+    <Property Name="HEADER" Type="bit" />
+    <Property Name="ORDER" Type="int" />
+    <Property Name="CREATED_DATE" Type="datetime" />
+    <Property Name="UPDATED_DATE" Type="datetime" />
+    <Property Name="ADMIN_CREATED" Type="nvarchar" MaxLength="300" />
+    <Property Name="ADMIN_UPDATED" Type="nvarchar" MaxLength="300" />
+    <Property Name="STATUS" Type="tinyint" />
+    <Property Name="ISDELETE" Type="bit" />
+    <Property Name="IMAGE" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="CATEGORY">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TITLE" Type="nvarchar" MaxLength="300" />
+    <Property Name="TITLE_EN" Type="nvarchar" MaxLength="300" />
+    <Property Name="SLUG" Type="nvarchar" MaxLength="300" />
+    <Property Name="SLUG_EN" Type="nvarchar" MaxLength="300" />
+    <Property Name="IMAGE" Type="nvarchar" MaxLength="500" />
+    <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="1000" />
+    <Property Name="DESCRIPTION_EN" Type="nvarchar" MaxLength="1000" />
+    <Property Name="ORDER" Type="int" />
+    <Property Name="CREATED_DATE" Type="datetime" />
+    <Property Name="UPDATED_DATE" Type="datetime" />
+    <Property Name="ADMIN_CREATED" Type="nvarchar" MaxLength="300" />
+    <Property Name="ADMIN_UPDATED" Type="nvarchar" MaxLength="300" />
+    <Property Name="STATUS" Type="tinyint" />
+    <Property Name="ISDELETE" Type="bit" />
+    <Property Name="POSITION_ID" Type="int" />
+    <Property Name="SUB_TITLE" Type="nvarchar" MaxLength="500" />
+    <Property Name="SUB_TITLE_EN" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="COMPANY_ADDRESS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TITLE" Type="nvarchar" MaxLength="300" />
+    <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="500" />
+    <Property Name="ORDER" Type="int" />
+  </EntityType>
+  <EntityType Name="COMPANY_INFOR">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TITLE" Type="nvarchar" MaxLength="300" />
+    <Property Name="PHONE" Type="nvarchar" MaxLength="50" />
+    <Property Name="EMAIL" Type="nvarchar" MaxLength="100" />
+    <Property Name="COMPANY" Type="nvarchar" MaxLength="300" />
+    <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="500" />
+    <Property Name="INSTAGRAM" Type="nvarchar" MaxLength="500" />
+    <Property Name="TWITTER" Type="nvarchar" MaxLength="500" />
+    <Property Name="ORDER" Type="int" />
+    <Property Name="CREATED_DATE" Type="datetime" />
+    <Property Name="UPDATED_DATE" Type="datetime" />
+    <Property Name="ADMIN_CREATED" Type="nvarchar" MaxLength="300" />
+    <Property Name="ADMIN_UPDATED" Type="nvarchar" MaxLength="300" />
+    <Property Name="STATUS" Type="tinyint" />
+    <Property Name="ISDELETE" Type="bit" />
+    <Property Name="DESCRIPTION_EN" Type="nvarchar" MaxLength="500" />
+    <Property Name="TITLE_EN" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="CONTACT">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="300" />
+    <Property Name="PHONE" Type="nvarchar" MaxLength="50" />
+    <Property Name="EMAIL" Type="nvarchar" MaxLength="100" />
+    <Property Name="COMPANY" Type="nvarchar" MaxLength="300" />
+    <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="500" />
+    <Property Name="ORDER" Type="int" />
+    <Property Name="CREATED_DATE" Type="datetime" />
+    <Property Name="UPDATED_DATE" Type="datetime" />
+    <Property Name="ADMIN_CREATED" Type="nvarchar" MaxLength="300" />
+    <Property Name="ADMIN_UPDATED" Type="nvarchar" MaxLength="300" />
+    <Property Name="STATUS" Type="tinyint" />
+    <Property Name="ISDELETE" Type="bit" />
+  </EntityType>
+  <EntityType Name="CUSTOMER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="100" />
+    <Property Name="CODE" Type="nvarchar" MaxLength="50" />
+    <Property Name="PHONE" Type="nchar" MaxLength="12" />
+    <Property Name="COMPANY" Type="nvarchar" MaxLength="100" />
+    <Property Name="EMAIL" Type="nvarchar" MaxLength="50" />
+    <Property Name="DESCRIPTIONS" Type="nvarchar" MaxLength="1000" />
+    <Property Name="CHECK" Type="bit" />
+    <Property Name="CREATE_DATE" Type="date" />
+    <Property Name="UPDATE_DATE" Type="date" />
+    <Property Name="ADMIN_CREATE" Type="nvarchar" MaxLength="50" />
+    <Property Name="ADMIN_UPDATE" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="LEADER_TEAM">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NAME" Type="nvarchar" MaxLength="300" />
+    <Property Name="PHONE" Type="nvarchar" MaxLength="50" />
+    <Property Name="EMAIL" Type="nvarchar" MaxLength="100" />
+    <Property Name="COMPANY" Type="nvarchar" MaxLength="300" />
+    <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="500" />
+    <Property Name="INSTAGRAM" Type="nvarchar" MaxLength="500" />
+    <Property Name="TWITTER" Type="nvarchar" MaxLength="500" />
+    <Property Name="ORDER" Type="int" />
+    <Property Name="CREATED_DATE" Type="datetime" />
+    <Property Name="UPDATED_DATE" Type="datetime" />
+    <Property Name="ADMIN_CREATED" Type="nvarchar" MaxLength="300" />
+    <Property Name="ADMIN_UPDATED" Type="nvarchar" MaxLength="300" />
+    <Property Name="STATUS" Type="tinyint" />
+    <Property Name="ISDELETE" Type="bit" />
+    <Property Name="IMAGE" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="NEWS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TITLE" Type="nvarchar" MaxLength="300" />
+    <Property Name="TITLE_EN" Type="nvarchar" MaxLength="300" />
+    <Property Name="SUB_TITLE" Type="nvarchar" MaxLength="300" />
+    <Property Name="SUB_TITLE_EN" Type="nvarchar" MaxLength="300" />
+    <Property Name="SLUG" Type="nvarchar" MaxLength="300" />
+    <Property Name="SLUG_EN" Type="nvarchar" MaxLength="300" />
+    <Property Name="IMAGE" Type="nvarchar" MaxLength="500" />
+    <Property Name="DESCRIPTION" Type="nvarchar" MaxLength="1000" />
+    <Property Name="DESCRIPTION_EN" Type="nvarchar" MaxLength="1000" />
+    <Property Name="CATEGORY_ID" Type="int" />
+    <Property Name="ORDER" Type="int" />
+    <Property Name="CREATED_DATE" Type="datetime" />
+    <Property Name="UPDATED_DATE" Type="datetime" />
+    <Property Name="ADMIN_CREATED" Type="nvarchar" MaxLength="300" />
+    <Property Name="ADMIN_UPDATED" Type="nvarchar" MaxLength="300" />
+    <Property Name="STATUS" Type="tinyint" />
+    <Property Name="ISDELETE" Type="bit" />
+  </EntityType>
+  <EntityType Name="POSITION">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CODE" Type="nvarchar" MaxLength="100" />
+    <Property Name="TITLE" Type="nvarchar" MaxLength="500" />
+    <Property Name="DESC" Type="nvarchar" MaxLength="500" />
+    <Property Name="STATUS" Type="tinyint" />
+  </EntityType>
+  <EntityContainer Name="BLOCKCHAINModelStoreContainer">
+    <EntitySet Name="ADMIN_USER" EntityType="Self.ADMIN_USER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BANNER" EntityType="Self.BANNER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CATEGORY" EntityType="Self.CATEGORY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="COMPANY_ADDRESS" EntityType="Self.COMPANY_ADDRESS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="COMPANY_INFOR" EntityType="Self.COMPANY_INFOR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CONTACT" EntityType="Self.CONTACT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CUSTOMER" EntityType="Self.CUSTOMER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LEADER_TEAM" EntityType="Self.LEADER_TEAM" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NEWS" EntityType="Self.NEWS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="POSITION" EntityType="Self.POSITION" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

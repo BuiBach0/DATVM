@@ -1,0 +1,16 @@
+.logo img{
+    width:60%;
+    margin-left:1rem;
+}
+.navbar-nav{
+    margin-right: 100px;
+}
+.d-flex{
+    display: flex;
+}
+.container-fluid{
+    margin-left: 300px;
+}
+.text-center{
+    text-align: center;
+}

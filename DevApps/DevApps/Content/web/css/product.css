@@ -1,0 +1,422 @@
+﻿.banner-product .row{
+    flex-flow: column-reverse;
+}
+.box-title-page{
+    border-left: 0.24em solid #044066; 
+    font-size: 1em;  
+    height: 2.2em;   
+}
+.box-title-page button{
+    border: none;  
+    color: #084984; 
+    background: transparent;  
+    border-bottom: 1px solid #084984; 
+    font-size: .72em;  
+}
+.title-page{
+    font-size: 1em;
+    font-family: 'Muli Bold';
+    color: #044066;
+    padding-left: 1.5em;   
+}
+.box-category ul {
+    padding: 0 1em ;
+}
+.box-category{
+    box-shadow: 0 0 3px #424242;   
+    margin-top: 1px;  
+    padding: 1em;  
+}
+.box-category ul li{
+    padding: .4em 0  ;  
+    border-bottom: 1px solid #000;  
+}
+.box-category ul li:last-child{
+    border: none;  
+}
+.box-category ul li a{
+    color: #000;  
+    font-family: 'Muli Bold';
+    font-size: 1em;  
+}
+.banner-product .item{
+    position: relative;   
+}
+.banner-product .item .content{
+    position: absolute;  
+    left: 50%;  
+    top: 2.2em;  
+    transform: translateX(-50%);  
+}
+.banner-product .item .content h2{
+    color: #fff;  
+    font-size: 1.44em; 
+    font-family: 'Muli Bold';
+}
+.banner-product .item .content .desc{
+    color: #e3e4e3; 
+    font-size: .96em;  
+    width: 18.34em;  
+    margin-bottom: 1.17em; 
+}
+.banner-product .item a{
+    display: inline-block; 
+    padding: .5em 1em;  
+    background: #fff;  
+    font-size: .72em; 
+    color: #000;  
+
+}
+.recommendation{
+    background: #f5f5f5;  
+    padding: 1.4em 0 2.2em 0; 
+    font-size: .84rem;   
+}
+.recommendation .box-title-page, .baby .box-title-page{
+    margin-bottom: 1.4em;  
+}
+.product{
+    font-size: 1em;  
+    background: #fff;  
+    padding: 1em 0 ; 
+    margin-bottom: 1em;  
+    border-radius: 8px ; 
+}
+.product p, .product p span{
+   font-family: 'Muli Bold';
+   margin-bottom: 0;
+}
+.product p{
+   padding: 0 2em;  
+     
+}
+.product .name{
+   height: 3em;  
+   overflow: hidden;
+}
+.product .img{
+    display: flex !important ;
+    justify-content: center;
+    align-items: center;
+}
+.product .list-image .img img{
+    max-height: 260px;
+    max-width: 70%; 
+} 
+.product .tag{
+    padding: .2em 1.56em; 
+    background:#044066;  
+    display: inline-flex; 
+    color: #fff;  
+    font-size: 0.72em;
+    margin-left: -2px;    
+}
+.product .tag.new{
+    
+    background: #da251d;   
+}
+.product .tag.orrganic{
+    background: #31b573;
+}
+.product .start i{
+    color: #044066;  
+    margin: 0 -3px;  
+}
+.product .price{
+    margin-bottom: .8em;  
+}
+.product a{
+    font-size: .8em; 
+    padding: .4em .5em .2em .5em; 
+    background:#044066;
+    color: #fff;  
+    border: 1px solid #044066;  
+    margin: 0 .2em;  
+}
+.product div a:last-child{
+    background: #fff;  
+    color: #044066;  
+}
+.product .nation img{
+    margin-right: 5px;  
+}
+.brands{
+    padding: 3.4em 0 4.4em 0;  
+    font-size: .84rem;  
+    background: #fff;  
+}
+.brands a{
+    width: 20%;  
+    padding:.5em; 
+    display: flex;  
+    justify-content: center;  
+}
+.brands img{
+    max-width: 100%;  
+    max-height: 60px; 
+}
+.brands .list{
+    margin: 0 -.5em;  
+}
+.brands .box-title-page{
+    margin-bottom: 1.5em;
+}
+.baby{
+    background: #f5f5f5;  
+    padding: 1em 0 3.6em 0 ; 
+    font-size: .83rem; 
+}
+.baby .row{
+    margin: 0 -4px;  
+}
+.baby-product{
+    background: #fff;  
+    flex-flow: column-reverse;  
+    padding: 1rem ;  
+    text-align: center;  
+}
+.baby-product .name , .food-main .content .name{
+    font-size: 0.72em;  
+    font-family: 'Muli Bold';
+    color: #084984;      
+}
+.baby-product a, .food-main .content a, .fashion-product a{
+    display: inline-block;  
+    padding: .4em 1.8em ; 
+    background: #084984;  
+    color: #fff; 
+    font-size: .72em;  
+}
+.baby-product .content{
+    margin: 0 auto; 
+}
+.foods{
+    padding: 2.2em 0 3.4em 0 ;
+    font-size: .83rem;  
+    background: #fff;  
+}
+.foods .box-title-page, .request .box-title-page{
+    margin-bottom: 1.2em;  
+}
+.food-main{
+    position: relative;   
+}
+.food-main .content{
+    position: absolute;  
+    width: 50%;  
+    left: 0;  
+    bottom: 0;  
+    padding: 2em; 
+}
+.food-item .name{
+    border-bottom: 1px solid #084984; 
+    color: #084984;  
+}
+.fashion .row{
+    margin: 0 -.4em; 
+}
+.fashion-product{
+    background: #fff; 
+    margin-bottom: 1em;  
+    padding: 1em 1em 2em 1em;  
+    margin: 0 .4em; 
+}
+
+.region{
+    background: #f5f5f5;  
+    padding: 1.4em 0 2.6em 0;  
+    font-size: .84rem;  
+}
+.region .box-title-page{
+    margin-bottom: 1.8em;  
+}
+.region a{
+    font-family: 'Muli Bold';
+    color: #003d64;  
+    font-size: 1em;  
+}
+.request{
+    padding: 2.2em 0 3.4em 0;
+    background: #fff;  
+    font-size: .9rem;  
+}
+.request img{
+    box-shadow: 0 0 5px #000;  
+    width: 100% ;  
+}
+.box-request{
+    background: #f5f5f5;  
+    font-size: 1em;  
+    margin :1em;  
+    max-width: calc( 100% - 2em);  
+    padding: 1em 1.4em;
+}
+.box-request label{
+    font-family: 'Muli Bold';
+    color: #044066;  
+    margin-bottom: 8px;  
+
+}
+.box-request input ,.box-request textarea {
+    width: 100%;
+    border: none;  
+    padding: 0 1em;   
+}
+.box-request select{
+    border: none;  
+    padding: 0 1em;    
+    color: #044066;
+}
+.box-request input, .box-request select{
+    font-size: .9em;  
+    height: 2.6em;  
+}
+.box-request textarea{
+    height: 3.6em; 
+}
+.box-request .delivery{
+    color:  #e1e1e1; 
+}
+.box-request input::placeholder{
+    color: #e1e1e1; 
+}
+.box-request button{
+    border: none; 
+    padding: .5em 2em; 
+    background: #084984; 
+    color: #fff; 
+    font-size: .72em; 
+    font-family: 'Muli Bold';
+    margin-top: .6em; 
+}
+.box-request .form-group{
+    margin-bottom: .6em; 
+}
+.product .slick-arrow img{
+    width: 1.2rem;  
+}
+.product .slick-prev{
+    left: 1rem;  
+    transform: translate(0,-100%);
+}
+.product .slick-next{
+    right: 1rem;  
+    transform: translate(0 , -100%); 
+    left: auto;  
+}
+@media only screen and (min-width: 768px){
+    
+    
+    .banner-product{
+        padding: 1em 0 2em 0 ; 
+    }
+    .brands img{  
+        max-height: 80px; 
+    }
+    
+    .baby-product img{
+        max-height: 10em  ; 
+        margin-bottom: 1em;   
+    }
+    .food-item img{
+        max-height: 130px; 
+        max-width: 80%;  
+    }
+    .fashion-product img{
+        max-height: 150px; 
+    }
+    .fashion-product .img{
+        height: 10em;  
+    }
+}
+@media only screen and (min-width: 992px) {
+    .box-title-page button {
+        width: 14em;
+    }
+    .banner-product {
+        padding: 0 0 2em 0;
+        font-size: .84rem;  
+    }
+    .banner-product .row{
+        flex-flow:  nowrap;
+    }
+    .box-category {
+        font-size: .84rem;
+        padding: 1.2em 0 0 0;
+        height: calc(100% - .5em);
+    }
+    .box-category ul{
+        padding: 0  1.2em ;  
+    }
+    .box-category ul li{
+        padding: .5em  0 .5em 1.6em;  
+    }
+    .banner-product .slick-arrow img{
+        width: 1.8rem;  
+    }
+    .banner-product .slick-prev{
+        left: 1.6rem; 
+        transform: translate(0, -100%);  
+    }
+    .banner-product .slick-next{
+        right: 1.6rem; 
+        left: auto;  
+        transform: translate(0, -100%);  
+    }
+    
+    .product a {
+        font-size: .4em;
+    }
+    .product p{
+        font-size: .72em;
+    }
+    .brands a{
+        width: 10%;  
+        padding: 0 .5em; 
+        font-size: 1em;  
+    }
+    .brands img{
+        max-width: 5.24em;  
+        max-height: 4em; 
+    }
+    .food-item {
+        margin-bottom: 1em;
+    }
+    .food-item img{
+        max-height: 6em; 
+        margin-left: -2em; 
+        max-width: unset;   
+    }
+    .food-main{
+        box-shadow: 0  0 2px #000; 
+    }
+    
+    .food-item .name a{
+        font-size: .72em;  
+    }
+    .food-item .name{
+        width: 8em; 
+        margin-bottom: .4em;  
+    }
+    .fashion-product img{
+        max-height: 10em; 
+    }
+
+    .baby-product {
+        padding: 2em;
+        flex-flow: nowrap;
+    }
+    .box-request{
+        width: auto;  
+        margin: 0 ; 
+    }
+    .request img {
+        box-shadow: 0 0 5px #000;
+        width: 30.4em;
+    }
+}
+@media only screen and (min-width: 1200px){
+    .baby-product img{
+        max-height: 11em;  
+    }
+}

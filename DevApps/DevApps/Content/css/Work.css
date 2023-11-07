@@ -1,0 +1,162 @@
+﻿.dev-work > div p {
+    font-size: 1.28rem ;
+    color: #281d52;
+}
+.dev-work{
+    margin-top: 7rem;
+}
+.dev-work .btn {
+    background-color: #281d52;
+    color: #fff;
+    font-size: 0.8rem;
+    border: none;
+    border-radius:0;
+    font-family: 'Sarabun-Medium';
+    padding:0.35rem 1rem;
+}
+.dev-work .the-first .our-work-ct{
+    padding-left: 1.1rem;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+        width: 88%;
+    border-left: 0.3rem solid #281d52;
+}
+.dev-work .the-first .our-work-ct p{
+    padding-bottom: 0.25rem;
+}
+.dev-work .the-first .work-top{
+    margin-top: 2rem;
+}
+.dev-work .recent{
+    margin-top: 3rem;
+}
+.dev-work .recent h2{
+    margin-bottom: 1.5rem;
+}
+.dev-work .recent h6 {
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;    
+    color: #8e83ba;
+    font-size: 0.83rem;
+    font-family: 'Sarabun-Regular' !important;
+}
+.dev-work .recent .read-more{
+    margin-top: 0.75rem;
+}
+.dev-work .recent a{
+    color: #00a2ff;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    line-height: 1rem;
+    border-bottom: 0.1rem solid #00a2ff;
+}
+.dev-work .recent .row > div{
+    margin-bottom: 2rem;
+}
+.dev-work .load-more {
+    font-size: 1.12rem;
+    padding:0.45rem 1.2rem 0.35rem;
+    margin-top: 1rem;
+}
+.dev-work .contact-us{
+    bottom: 0;
+    background-color: #000000;
+    width: 100%;
+    height: 100%;
+    opacity: 0.15;
+    padding-left: 1rem;
+    display: none;
+    z-index:99;
+}
+.dev-work .contact-us > div{
+    bottom: 0.75rem;
+}
+    .dev-work .contact-us h5 {
+        font-size: 0.9rem;
+        color: #fff;
+        opacity: 1;
+        margin: 0;
+        font-family: 'Sarabun-Regular' !important;
+    }
+.dev-work .contact-us a{
+    font-size: 1.2rem;
+    color: #fff;
+    opacity: 1;
+    z-index: 99;
+}
+
+.dev-work .propri-img:hover .contact-us{
+    display: block;
+    transition-delay: 0.3s;
+}
+.dev-work .propri-detail p{
+    font-size: 1.12rem;
+}
+.dev-work .proprietary h2{
+    margin-top: 3.25rem;
+    margin-bottom: 1.5rem;
+}
+.dev-work .proprietary .row > div{
+    margin-bottom: 1.75rem;
+}
+.dev-work .get h3{
+    color: #281d52;
+}
+.dev-work .get input {
+    height: 3rem;
+    background-color: #e6e6e6;
+    max-width: 80rem !important;
+    border: none;
+    margin-top: 0.75rem;
+    font-size: 0.96rem;
+    
+}
+.dev-work .get .inh textarea {
+    height: 8rem;
+    max-width: 100rem;
+    background-color: #e6e6e6;
+    margin-top: 1rem;
+    border: none;
+    font-size: 0.96rem;
+    padding-left: 1rem;
+}
+.dev-work .send {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.96rem;
+}
+.dev-work .send input{
+    height: 1.2rem;
+    width: 1rem;
+    margin: 0 0.5rem 0 15px;
+}
+.dev-work .get .btn-get{
+    font-size: 1.2rem;
+    color: #fff;
+    padding-top: 0.5rem;
+    padding-bottom: 0.75rem;
+    margin-bottom: 3rem;
+}
+
+@media (max-width: 991px) {
+    
+    .dev-work .the-first .work-top {
+        margin-top: 0rem;
+    }
+    .dev-work .the-first .work-top h2 {
+        margin-top: 0rem;
+    }
+    .dev-work .get h3 {
+        width: 80%;
+        margin: 0 auto 1rem;
+    }
+    .dev-work .proprietary .row > div {
+        margin-bottom: 0.5rem;
+    }
+    .dev-work {
+        margin-top: 3rem;
+    }
+    .dev-work .btn {
+        margin-bottom: 1rem;
+    }
+}

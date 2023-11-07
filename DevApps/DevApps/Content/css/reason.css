@@ -1,0 +1,271 @@
+﻿.reason .bn-content {
+    top: 0;
+    position: absolute;
+    left: 0;
+    transform: translate(17.3%, 37%);
+}
+
+.reason .reason-bn {
+    position: relative;
+    margin-top: 6rem;
+}
+
+.reason .bn-h h2 {
+    width: 69%;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.6rem !important;
+}
+
+.reason .bn-ct p {
+    color: #fff;
+    text-align: justify;
+    width: 97%;
+    margin-top: 1rem;
+}
+
+.reason p {
+    font-family: 'Sarabun-Medium';
+    color: #261a4e;
+}
+
+.reason .define i {
+    font-size: 0.3rem;
+    margin-top: 0.5rem;
+    color: #261a4e;
+}
+
+.reason .define-h {
+    margin-top: 3.4rem;
+}
+
+.reason .define-ct ul {
+    margin-top: 1.5rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:75%;
+}
+.reason .define-ct ul li:before {
+    content: '';
+    height: 0.35rem;
+    width: 0.35rem;
+    position: absolute;
+    background-color: #013c8c;
+    border-radius: 50%;
+    margin-top: 0.5rem;
+}
+.reason .define-ct ul li p{
+    margin-left: 1rem;
+    text-align: justify;
+}
+.reason .define-items{
+    margin-top: 1rem;
+}
+.reason .define-items .item-title p{
+    font-family: 'Sarabun-Bold';
+}
+.reason .define-items .item-img{
+    height: 4rem;
+    width: 4rem;
+    display: block;
+    margin: 1rem auto;
+}
+.reason h4,
+.reason h3 ,
+.reason h2 {
+    color: #261a4e;
+    font-family: 'Sarabun-Bold' !important;
+}
+.reason .business-h{
+    margin-bottom: 2rem;
+}
+.reason .business{
+    margin-top: 3rem;
+}
+.reason .business .business-ct > div:nth-child(2n+1) .bn-item {
+    text-align: left;
+    padding-left: 0.5rem;
+}
+.reason .business .business-ct > div:nth-child(2n) .bn-item {
+    text-align: right;
+}
+.reason .business .business-ct > div:nth-child(2n) .bn-item p:last-child{
+    padding-left: 15%;
+}
+.reason .business .business-ct > div:nth-child(2n+1) .bn-item p:last-child{
+    width: 85%;
+}
+.reason .business .business-ct .bn-item p.font-italic{
+    margin-bottom: 0;
+}
+.reason .business .business-ct .bn-img{
+    width: 20rem;
+    height: 18rem;
+    margin: 0 auto;
+}
+.reason .business .business-ct .bn-item h3{
+    margin-top: 3.5rem;
+    
+}
+.reason .business .business-ct > div:nth-child(2n)   .bn-img {
+   margin-top: -4rem;
+    
+}
+
+
+.reason .we-can{
+    margin-top: 4rem;
+}
+.reason .wecan-ct {
+    margin-bottom: 1rem;
+}
+.reason .wecan-ct p{
+    width: 85%;
+    margin: 0.5rem auto;
+}
+.reason .wc-items .wc-img{
+    width: 3.5rem;
+    margin: 1rem auto 0.5rem;;
+}
+.reason .wc-items .wc-img img{
+    height: 4rem;
+    width: auto;
+}
+.reason .wc-items .wecan-detail p{
+    width: 90%;
+    margin: 1rem auto;
+}
+
+
+.reason .project .project-ct {
+    top: 20%;
+}
+.reason .project .content-ph h6{
+    color: #fff;
+    margin-top: 1rem;
+    margin-bottom: 0.25rem;
+}
+.reason .project .content-ph p{
+    color: #FFF;
+    font-size: 0.7rem;
+}
+.reason .project .content-ph{
+    width: 72%;
+    display: block;
+    margin: auto;
+}
+.reason .project .content-ph img{
+    width: 4rem;
+    height:4rem;
+}
+.reason .body-wc{
+    width: 100% !important;
+    padding: 0 0.2rem;
+}
+
+.reason .project-h{
+    margin-bottom: 1.1rem;
+}
+.reason .project{
+    margin-bottom: 4rem;
+    margin-top:1rem;
+}
+@media (min-width: 1700px) and (max-width: 1900px) {
+    .reason .bn-h h2 {
+        width: 74%;
+    }
+    .reason .bn-content {
+        transform: translate(17.3%, 45%);
+    }
+}
+
+@media (max-width: 1450px) and (min-width: 1300px) {
+    .reason .bn-h h2 {
+        width: 75%;
+    }
+    .reason .bn-content {
+        transform: translate(17.3%, 42%);
+    }
+}
+@media (min-width: 1030px ) and (max-width: 1140px) {
+    .reason .bn-content {
+        top: 0;
+        position: absolute;
+        left: 0;
+        transform: translate(17.3%, 39%);
+    }
+    .reason .bn-h h2 {
+        text-transform: inherit;
+        width: 73%;
+        color: #fff;
+    }
+}
+@media (max-width: 991px) {
+    .reason .reason-bn {
+        margin-top: 4rem;
+    }
+    .reason .define-ct ul{
+        width: 95% !important;
+    }
+    .reason .define-items .df-item {
+        display: flex;
+        justify-content: space-between;
+    }
+    .reason .define-items .df-item .item-img{
+        width: auto;
+        margin-right: 1rem;
+        height: 5rem;
+        margin-top: 0.5rem;
+    }
+    .reason .define-items .df-item .item-img img{
+        width: 4rem ;
+        height: auto;
+    }
+    .reason .define-items .df-item .item-title p{
+        text-align: justify !important;
+    }
+
+    .reason .wecan-ct p {
+        width: 90%;
+        text-align: justify !important;
+    }
+
+    .reason .project {
+        margin-bottom: 2rem;
+    }
+    .reason .business .business-ct > div:nth-child(2n) .bn-img {
+        margin-top: 0rem;
+    }
+    .reason .project .content-ph img {
+        width: 10rem;
+        height: 10rem;
+        margin: 0 auto;
+    }
+    .reason .project .project-ct {
+        top: 11%;
+    }
+    .reason .bn-content {
+        transform: translate(0, 2rem);
+    }
+    .reason .bn-content p {
+       display: none;
+    }
+    .reason .bn-content h2 {
+       font-size: 1rem !important;
+    }
+    .reason .wc-items .wecan-detail p {
+        text-align: justify;
+        text-align-last: center;
+    }
+    .reason .define-h{
+        margin-top: 2rem;
+    }
+    .reason .business{
+        margin-top: 0em;
+    }
+    .reason .we-can{
+        margin-top: 0;
+    }
+   
+}

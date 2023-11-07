@@ -1,0 +1,564 @@
+﻿@model IEnumerable<DevApps.ModelsView.ModelsNews>
+@{
+    var bannerUs = ViewBag.bannerUs as IEnumerable<DevApps.Models.BANNER>;
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int stt = 1;
+    int od = 1;
+}
+
+
+<!-- Research and Development -->
+@if ((int)Session["language"] == 1)
+{
+    <section class="banner">
+        @foreach (var item in bannerUs)
+        {
+            if (item.ORDER == 1)
+            {
+                <div class="banner-img position-relative">
+                    <img src="@item.IMAGE" alt="banner" class="w-100" />
+                </div>
+                <div class="banner-desc container position-absolute">
+                    <h2>@item.TITLE</h2>
+                    <p class="text-justify">
+                        @item.DESCRIPTION
+                    </p>
+                    <button class="home-btn"> LEARN MORE</button>
+                </div>
+            }
+        }
+    </section>
+    <!-- End Banner -->
+    foreach (var item in Model)
+    {
+        <div style="background: #f3f3f3">
+            @if (stt == 1)
+            {
+                <section class="welcome">
+                    <div class="welcome-title text-center">
+                        <h2>@item.cate.TITLE</h2>
+                        <div class="welcome-desc">
+                            @Html.Raw(item.cate.DESCRIPTION)
+                        </div>
+                    </div>
+
+                    <div class="slide-welcome">
+                        @foreach (var val in item.news)
+                        {
+                            <div class="slide-welcome-item">
+                                <img src="@val.IMAGE" alt="@val.TITLE" />
+                            </div>
+                        }
+                    </div>
+                </section>
+            }
+            @if (stt == 2)
+            {
+                <section class="cooperation container">
+
+                    <div class="cooperation-title text-center">
+                        <h2>@item.cate.TITLE</h2>
+                    </div>
+                    <div class="cooperation-content row pt-md-5">
+                        <div class="col-lg-6">
+                            @foreach (var val in item.news)
+                            {
+                                <div class="cooperation-content-item d-flex align-items-center">
+                                    <div><span>@od</span></div>
+                                    <div>
+                                        <h4>
+                                            @val.TITLE
+                                        </h4>
+                                    </div>
+                                </div>
+
+                                od++;
+                            }
+                        </div>
+                        <div class="col-lg-6">
+                            <img src="@item.cate.IMAGE" alt="aaaaaaa" />
+                        </div>
+                    </div>
+                </section>
+            }
+        </div>
+
+        if (stt == 3)
+        {
+            <section class="services container">
+                <div class="services-title text-center">
+                    <h2>@item.cate.TITLE</h2>
+                </div>
+                <div class="services-content">
+                    <div class="row d-flex align-items-center">
+                        @foreach (var val in item.news)
+                        {
+                            <div class="services-item col-sm-4 text-center text-sm-left">
+                                <div class="img">
+                                    <img src="@val.IMAGE" alt="@val.TITLE" />
+                                </div>
+                                <div>
+                                    <h4>@val.TITLE</h4>
+                                    <div>@Html.Raw(val.DESCRIPTION)</div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </section>
+        }
+
+        if (stt == 4)
+        {
+            <section class="research container">
+                <div class="research-title text-center ">
+
+                    <h2>@item.cate.TITLE</h2>
+                    <div class="research-desc">
+                        <div>
+                            @Html.Raw(item.cate.DESCRIPTION)
+                        </div>
+                    </div>
+                    <div class="research-btn d-flex align-items-center justify-content-center">
+                        <button type="button" class="btn d-flex align-items-center">
+                            Discovery <img src="~/Content/images/HOMEPAGE/button-shape.png" alt="swt" />
+                        </button>
+                    </div>
+                    <div class="d-none d-lg-block">
+                        <div class="h-content d-flex">
+                            @{ int check = 0;
+                            }
+                            @foreach (var val in item.news)
+                            {
+                                if (check == 0)
+                                {
+
+                                    <div class="content-left w-50">
+                                        <div class="h-heading">
+                                            <h3>@val.TITLE</h3>
+                                            <h4>@val.SUB_TITLE</h4>
+                                        </div>
+                                        <div class="h-list">
+
+                                            <div> @Html.Raw(val.DESCRIPTION)</div>
+                                        </div>
+                                    </div>
+                                }
+
+                                if (check == 1)
+                                {
+                                    <div class="content-right position-relative">
+                                        <div class="h-heading">
+                                            <h3>@val.TITLE</h3>
+                                            <h4>@val.SUB_TITLE</h4>
+                                        </div>
+                                        <div class="lorem-p">
+                                            @Html.Raw(val.DESCRIPTION)
+                                        </div>
+                                        <div class="position-absolute research1 ">
+                                            <img src="@item.cate.IMAGE" alt="img" class="w-100" />
+                                        </div>
+                                    </div>
+                                }
+                                check++;
+                            }
+
+                        </div>
+                    </div>
+
+
+                    <div class="d-block d-lg-none">
+                        <div>
+                            <div class="h-content  d-flex justify-content-between">
+                                @{ int temp = 0;
+                                }
+                                @foreach (var val in item.news)
+                                {
+
+                                    if (temp == 0)
+                                    {
+
+                                        <div class="content-left">
+                                            <div class="h-heading">
+                                                <h3>@val.TITLE</h3>
+                                                <h4>@val.SUB_TITLE</h4>
+                                            </div>
+                                            <div class="h-list">
+                                                @Html.Raw(val.DESCRIPTION)
+
+                                            </div>
+                                        </div>
+                                    }
+                                    if (temp == 1)
+                                    {
+                                        <div class="content-right ">
+                                            <div class="h-heading">
+                                                <h3>@val.TITLE</h3>
+                                                <h4>@val.SUB_TITLE</h4>
+                                            </div>
+                                            <div class="lorem-p">
+                                                <div>
+                                                    @Html.Raw(val.DESCRIPTION)
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+                                    temp++;
+                                }
+                            </div>
+                            <div class=" research1 d-flex">
+                                <img src="@item.cate.IMAGE" alt="img" class="w-50" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+        }
+
+
+        if (stt == 5)
+        {
+            <section class="partner container">
+                <div class="partner-title text-center">
+                    <h2>@item.cate.TITLE</h2>
+                </div>
+                <div class="partner-content row">
+                    @foreach (var val in item.news)
+                    {
+                        <div class="card col-lg-4">
+                            <div class="@val.SUB_TITLE">
+                                <!-- Card image -->
+                                <div class="view overlay">
+                                    <img class="card-img-top" src="@val.IMAGE" alt="Card image cap" />
+                                    <a href="#!">
+                                        <div class="mask rgba-white-slight"></div>
+                                    </a>
+                                </div>
+                                <!-- Card content -->
+                                <div class="card-body">
+                                    <h4 class="card-title">@val.TITLE</h4>
+                                    <div class="card-text">
+                                        @Html.Raw(val.DESCRIPTION)
+                                    </div>
+                                    <a href="#" class="btn">Learn more</a>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <div class="view-more w-100 d-flex justify-content-center">
+                    <a href="#" class="btn">View more</a>
+                </div>
+            </section>
+        }
+
+        if (stt == 6)
+        {
+            <section class="join container">
+                <div class="join-title text-center">
+                    <h2>@item.cate.TITLE</h2>
+                    <div class="join-desc">
+                        <div>
+                            @Html.Raw(item.cate.DESCRIPTION)
+                        </div>
+                    </div>
+                </div>
+                <div class="view-more w-100 d-flex justify-content-center">
+                    <a href="#" class="btn">Join now</a>
+                </div>
+            </section>
+        }
+        stt++;
+    }
+}
+
+else
+{
+    <section class="banner">
+        @foreach (var item in bannerUs)
+        {
+            if (item.ORDER == 1)
+            {
+                <div class="banner-img position-relative">
+                    <img src="@item.IMAGE" alt="banner" class="w-100" />
+                </div>
+                <div class="banner-desc container position-absolute">
+                    <h2>@item.TITLE_EN</h2>
+                    <p class="text-justify">
+                        @Html.Raw(item.DESCRIPTION_EN)
+                    </p>
+                    <button class="home-btn"> TÌM HIỂU THÊM</button>
+                </div>
+            }
+        }
+    </section>
+    <!-- End Banner -->
+    foreach (var item in Model)
+    {
+        <div style="background: #f3f3f3">
+            @if (stt == 1)
+            {
+
+                <section class="welcome">
+                    <div class="welcome-title text-center">
+                        <h2>@item.cate.TITLE_EN</h2>
+                        <div class="welcome-desc">
+                            <div> @Html.Raw(item.cate.DESCRIPTION_EN)</div>
+                        </div>
+                    </div>
+
+                    <div class="slide-welcome">
+                        @foreach (var val in item.news)
+                        {
+                            <div class="slide-welcome-item">
+                                <img src="@val.IMAGE" alt="@val.TITLE_EN" />
+                            </div>
+                        }
+                    </div>
+                </section>
+            }
+            @if (stt == 2)
+            {
+                <section class="cooperation container">
+
+                    <div class="cooperation-title text-center">
+                        <h2>@item.cate.TITLE_EN</h2>
+                    </div>
+                    <div class="cooperation-content row pt-md-5">
+                        <div class="col-lg-6">
+                            @foreach (var val in item.news)
+                            {
+                                <div class="cooperation-content-item d-flex align-items-center">
+                                    <div><span>@od</span></div>
+                                    <div>
+                                        <h4>
+                                            @val.TITLE_EN
+                                        </h4>
+                                    </div>
+                                </div>
+
+                                od++;
+                            }
+                        </div>
+                        <div class="col-lg-6">
+                            <img src="@item.cate.IMAGE" alt="aaaaaaa" />
+                        </div>
+                    </div>
+                </section>
+            }
+        </div>
+
+        if (stt == 3)
+        {
+            <section class="services container">
+                <div class="services-title text-center">
+                    <h2>@item.cate.TITLE_EN</h2>
+                </div>
+                <div class="services-content">
+                    <div class="row d-flex align-items-center">
+                        @foreach (var val in item.news)
+                        {
+                            <div class="services-item col-sm-4 text-center text-sm-left">
+                                <div class="img">
+                                    <img src="@val.IMAGE" alt="@val.TITLE_EN" />
+                                </div>
+                                <div>
+                                    <h4>@val.TITLE</h4>
+                                    <div>@Html.Raw(val.DESCRIPTION_EN)</div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </section>
+        }
+
+        if (stt == 4)
+        {
+            <section class="research container">
+                <div class="research-title text-center ">
+
+                    <h2>@item.cate.TITLE_EN</h2>
+                    <div class="research-desc">
+                        <div>
+                            @Html.Raw(item.cate.DESCRIPTION_EN)
+                        </div>
+                    </div>
+                    <div class="research-btn d-flex align-items-center justify-content-center">
+                        <button type="button" class="btn d-flex align-items-center">
+                            Khám Phá <img src="~/Content/images/HOMEPAGE/button-shape.png" alt="swt" />
+                        </button>
+                    </div>
+                    <div class="d-none d-lg-block">
+                        <div class="h-content d-flex">
+                            @{ int check = 0;
+                            }
+                            @foreach (var val in item.news)
+                            {
+                                if (check == 0)
+                                {
+
+                                    <div class="content-left w-50">
+                                        <div class="h-heading">
+                                            <h3>@val.TITLE_EN</h3>
+                                            <h4>@val.SUB_TITLE_EN</h4>
+                                        </div>
+                                        <div class="h-list">
+                                            <div> @Html.Raw(val.DESCRIPTION_EN)</div>
+                                        </div>
+                                    </div>
+                                }
+
+                                if (check == 1)
+                                {
+                                    <div class="content-right position-relative">
+                                        <div class="h-heading">
+                                            <h3>@val.TITLE_EN</h3>
+                                            <h4>@val.SUB_TITLE_EN</h4>
+                                        </div>
+                                        <div class="lorem-p">
+                                            @Html.Raw(val.DESCRIPTION_EN)
+                                        </div>
+                                        <div class="position-absolute research1 ">
+                                            <img src="@item.cate.IMAGE" alt="img" class="w-100" />
+                                        </div>
+                                    </div>
+                                }
+                                check++;
+                            }
+
+                        </div>
+                    </div>
+
+
+                    <div class="d-block d-lg-none">
+                        <div>
+                            <div class="h-content  d-flex justify-content-between">
+                                @{ int temp = 0;
+                                }
+                                @foreach (var val in item.news)
+                                {
+
+                                    if (temp == 0)
+                                    {
+
+                                        <div class="content-left">
+                                            <div class="h-heading">
+                                                <h3>@val.TITLE_EN</h3>
+                                                <h4>@val.SUB_TITLE_EN</h4>
+                                            </div>
+                                            <div class="h-list">
+                                                @Html.Raw(val.DESCRIPTION_EN)
+
+                                            </div>
+                                        </div>
+                                    }
+                                    if (temp == 1)
+                                    {
+                                        <div class="content-right ">
+                                            <div class="h-heading">
+                                                <h3>@val.TITLE_EN</h3>
+                                                <h4>@val.SUB_TITLE_EN</h4>
+                                            </div>
+                                            <div class="lorem-p">
+                                                <div>
+                                                    @Html.Raw(val.DESCRIPTION_EN)
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+                                    temp++;
+                                }
+                            </div>
+                            <div class=" research1 d-flex">
+                                <img src="@item.cate.IMAGE" alt="img" class="w-50" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+        }
+
+
+        if (stt == 5)
+        {
+            <section class="partner container">
+                <div class="partner-title text-center">
+                    <h2>@item.cate.TITLE_EN</h2>
+                </div>
+                <div class="partner-content row">
+                    @foreach (var val in item.news)
+                    {
+                        <div class="card col-lg-4">
+                            <div class="@val.SUB_TITLE_EN">
+                                <!-- Card image -->
+                                <div class="view overlay">
+                                    <img class="card-img-top" src="@val.IMAGE" alt="Card image cap" />
+                                    <a href="#!">
+                                        <div class="mask rgba-white-slight"></div>
+                                    </a>
+                                </div>
+                                <!-- Card content -->
+                                <div class="card-body">
+                                    <h4 class="card-title">@val.TITLE_EN</h4>
+                                    <div class="card-text">
+                                        @Html.Raw(val.DESCRIPTION_EN)
+                                    </div>
+                                    <a href="#" class="btn">Tìm hiểu thêm</a>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <div class="view-more w-100 d-flex justify-content-center">
+                    <a href="#" class="btn">Xem thêm</a>
+                </div>
+            </section>
+        }
+
+        if (stt == 6)
+        {
+            <section class="join container">
+                <div class="join-title text-center">
+                    <h2>@item.cate.TITLE_EN</h2>
+                    <div class="join-desc">
+                        <div>
+                            @Html.Raw(item.cate.DESCRIPTION_EN)
+                        </div>
+                    </div>
+                </div>
+                <div class="view-more w-100 d-flex justify-content-center">
+                    <a href="#" class="btn">Tham Gia Ngay</a>
+                </div>
+            </section>
+        }
+        stt++;
+    }
+}
+<!-- Join with us -->
+<!-- Research and Development -->
+<!-- Our Partner -->
+<!-- Join with us -->
+<!-- Join with us -->
+
+@section scripts{
+
+    <script>
+        let ht = '<i class="fas fa-circle"> </i>';
+        $(document).ready(function () {
+            $(".content-left h-list ul li p").prepend(ht);
+        });
+
+        $(document).ready(function () {
+            $(".content-left h-list ul li").prepend(ht);
+        });
+
+    </script>
+
+
+}

@@ -1,0 +1,110 @@
+﻿.dev-wc p {
+    font-size: 1.12rem;
+    font-family: 'Sarabun-Medium';
+    color: #281d52;
+}
+.dev-wc h3 {
+    color: #281d52;
+    font-family: 'Sarabun-Bold' !important;
+}
+.dev-wc h6 {
+    font-size: 1.12rem;
+    color: #281d52;
+}
+.dev-wc .font-diff {
+    font-family: 'Sarabun-Italic';
+}
+ .dev-wc h6:before {
+    content: '';
+    position: absolute;
+    font-size: 2rem;
+    top: 0;
+    height: 0.3rem;
+    width: 6rem;
+    background-color: #281d52;
+}
+.dev-wc .industries{
+    margin-top: 7rem;
+}
+.dev-wc .industries .indus-ct {
+    border-left: 0.2rem solid #281d52;
+    padding-left: 1rem;
+}
+.dev-wc .btn {
+    background-color: #281d52;
+    color: #fff;
+    font-size: 0.8rem;
+    border: none;
+    border-radius: 0;
+    font-family: 'Sarabun-Medium';
+    padding: 0.35rem 1rem;
+}
+.dev-wc .industries .indus-ct {
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+    width: 90%;
+}
+.dev-wc .consumer .btn{
+    padding: 0.5rem 0.75rem;
+    font-size: 1.12rem;
+    margin-top: 0.75rem;
+}
+.dev-wc .consumer .consumer-h{
+    margin-bottom: 0.5rem;
+}
+.dev-wc .indus-ct p {
+    padding-bottom: 0.25rem;
+}
+.dev-wc .consumer .row > div:first-child{
+    text-align: right;
+    padding-right:2.1rem;
+    justify-content: right;
+
+}
+.dev-wc .consumer{
+    margin-top:3.8rem;
+}
+.dev-wc .consumer .row > div:last-child {
+    text-align: left;
+    padding-left: 2.1rem;
+}
+.dev-wc .consumer .row > div:first-child p {
+    text-align: justify;
+    text-align-last: right;
+}
+.dev-wc .consumer .row > div:first-child h6:before{
+    margin-left: 1rem;
+}
+.dev-wc .consumer:last-child {
+    margin-bottom: 4rem;
+}
+@media (max-width: 991px) {
+    .dev-wc .consumer .row > div:first-child {
+        padding-right: 1rem;
+    }
+    .dev-wc .consumer .row > div:last-child {
+        padding-left: 1rem;
+    }
+    .dev-wc .consumer .consumer-h {
+        margin-top: 2rem;
+    }
+    .dev-wc h6:before {
+        top: 1rem;
+    }
+    .dev-wc .consumer {
+        margin-top: 1rem;
+    }
+    .dev-wc .consumer .btn {
+        margin-bottom: 0.75rem;
+        margin-top: 0;
+    }
+    .dev-wc .industries {
+        margin-top: 3rem;
+    }
+    .dev-wc .indus-h  h2{
+        margin-top: 0;
+    }
+    .dev-wc .indus-btn{
+        margin-bottom: 1rem;
+    }
+}

@@ -1,0 +1,413 @@
+﻿section h2 {
+    text-transform: uppercase;
+    font-family: 'Sarabun-Bold';
+    color: #013c8c;
+}
+
+section p {
+    color: #013c8c;
+    font-family: 'Sarabun-Bold';
+}
+.banner .banner-desc{
+    top: 0;
+    left:0;
+    transform: translate(9.5rem, 13rem);
+    width:36% !important;
+}
+.banner .banner-desc p{
+    font-size: 0.8rem;
+    font-family: 'Sarabun-Medium';
+    width: 91%;
+    color: #fff;
+}
+.banner .banner-desc .home-btn{
+    color: #276eef;
+    background-color: #fff;
+    font-size: 0.8rem;
+    font-family: 'Sarabun-Medium';
+    padding: 0.25rem 0.75rem;
+    margin-top: 0.5rem;
+    border: none;
+}
+.banner .banner-desc h2{
+    color: #fff;
+    text-transform: initial;
+}
+    /* Welcome */
+.welcome, .services, .cooperation, .join, .partner, .research, .footer {
+    padding-top: 2rem;
+    font-size: 0.64em;
+}
+.welcome-title h2 {
+    padding-top: 3rem;
+    margin-top: 0;
+}
+.welcome-desc {
+    width: 55%;
+    margin: 0.5rem auto;
+}
+
+.welcome-desc > p {
+    margin: 0;
+    font-family: 'Sarabun-Medium';
+}
+
+.slide-welcome {
+    padding: 2em 4em 0;
+}
+
+.slide-welcome-item {
+    padding: 0.5rem;
+}
+
+.slide-welcome .slick-dots {
+    position: unset;
+}
+
+.slick-dots li {
+    margin: 0 15px;
+}
+
+    .slick-dots li button::before {
+        content: "";
+        opacity: 0.15;
+        border-bottom: 3px solid #333366;
+        padding: 0 20px;
+    }
+
+/* Cooperation */
+.cooperation {
+    padding:1rem 0 3rem;
+}
+
+.cooperation-content-item {
+    padding: 2em 0;
+}
+
+.cooperation h4 {
+    margin: 0;
+}
+
+.cooperation-content span {
+    color: #fff;
+    background: #003399;
+    border-radius: 50%;
+    font-size: 2em;
+    width: 3em;
+    height: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cooperation-content h4 {
+    margin-left: 1em;
+}
+
+/* Services */
+.services-title {
+    padding-bottom: 2em;
+}
+
+.services-content h4 {
+    font-size: 1.9em;
+}
+
+.services .img {
+    padding: 0.5rem 0;
+    height: 4.8rem;
+}
+
+.services img {
+    width: auto;
+}
+
+.services-content p {
+    margin: 0;
+}
+.services-item{
+    margin-bottom: 1.5rem;
+}
+/* Research and Development */
+.research-desc p {
+    width: 80%;
+    margin: auto;
+}
+
+.research-btn {
+    margin-top: 1em;
+}
+
+    .research-btn button {
+        background: #003399;
+        color: #fff;
+        font-family: sarabun_bold;
+        font-size: 0.96rem;
+        margin-top: 1.5rem;
+        width: 8.4rem;
+        height: 2.6rem;
+        padding: 1rem 1.5rem;
+        border-radius: 0;
+    }
+
+.research-title button img {
+    width: auto;
+    margin-left: 15px;
+}
+
+/* Our Partner */
+.partner-content {
+    padding: 1.75rem 0;
+}
+
+.partner img {
+    width: 4rem;
+}
+
+.partner .card {
+    box-shadow: none;
+    border: none;
+    height: 22rem;
+}
+
+    .partner .card .view {
+        padding: 4em 2.5rem;
+    }
+
+    .partner .card .card-title {
+        font-size: 1rem;
+        margin: 0;
+    }
+
+    .partner .card .card-body {
+        padding: 7rem 4em 2em;
+        color: #fff;
+    }
+
+    .partner .card .color-block {
+        border-radius: 5%;
+    }
+
+    .partner .card .gradient-blue {
+        height: 21rem;
+        background-image: linear-gradient(to bottom right, #828bff, #2104fd);
+    }
+
+    .partner .card .gradient-purple {
+        height: 21rem;
+        background-image: linear-gradient(to bottom right, #9612fb, #d20145);
+    }
+
+    .partner .card .gradient-green {
+        height: 21rem;
+        background-image: linear-gradient(to bottom right, #f9ea46, #1fb077);
+    }
+
+    .partner .card .card-body .card-text p{
+        color: #fff;
+        font-size: 0.8rem;
+    }
+
+    .partner .card .card-body a.btn {
+        width: 100%;
+        border: 2px solid #fff;
+        font-size: 0.96rem;
+        text-transform: uppercase;
+        display: none;
+    }
+    .partner .card .card-body:hover a.btn{
+        display: block;
+    }
+
+    .view-more a {
+        background: #003399;
+        color: #fff;
+        font-size: 1.9em;
+        padding: 0.5rem 0.75rem;;
+        text-transform: uppercase;
+    }
+    .view-more a.btn {
+        border-radius: 0;
+    }
+
+/* Join with us */
+.join-desc {
+    width: 68%;
+    margin: auto;
+    padding: 0.2rem 0 0.75rem;
+}
+/* discovery*/
+.research .content-left {
+    -webkit-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.31);
+    -moz-box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.31);
+    box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.11);
+}
+.research .h-list ul{
+    width: 67%;
+}
+.research .content-left {
+    text-align: left;
+    padding-top: 0.5rem;
+    padding-left: 1.5rem;
+}
+
+    .research .content-left h3 {
+        color: #828282;
+    }
+
+    .research .content-left h4,
+    .research .content-left i {
+        color: #013c8c;
+    }
+    .research .content-left i {
+        margin-top: 0.65rem;
+    }
+    .research .content-left p {
+        margin-left: 1rem;
+    }
+.research .h-list ul li:before {
+    content: '';
+    height: 0.5rem;
+    width: 0.5rem;
+    position: absolute;
+    background-color: #013c8c;
+    border-radius: 50%;
+    margin-top: 0.5rem;
+    margin-right: 1rem;
+}
+.research .content-right {
+    background-color: #013c8c;
+    text-align: left;
+    -webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.56);
+    -moz-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.56);
+    box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.25);
+}
+.welcome .slide-welcome {
+    margin-bottom: 0;
+}
+      
+.research .lorem-p p {
+    color: #fff;
+    padding-left: 1.5rem;
+    width: 76%;
+    margin-bottom: 0;
+}
+
+.research .content-right {
+    width: 46%;
+    padding: 0 1.8rem 1.8rem;
+    transform: translate(-31%, 31%);
+}
+
+    .research .content-right h3,
+    .research .content-right h4 {
+        color: #fff;
+    }
+
+    .research .content-right .research1 {
+        transform: translate(56%, -60%);
+        top: 0;
+        right: 0;
+        width: 19.2rem;
+        height: 18.64rem;
+    }
+.join{
+    margin-bottom: 3rem;
+}
+.research .h-content {
+    margin-top: 4.5rem;
+    margin-bottom: 5rem;
+}
+@media (max-width: 991.98px) {
+    .research .content-right {
+        transform: translate(0, 0);
+    }
+    .welcome, .services, .cooperation, .join, .partner, .research, .footer {
+        padding-top: 0rem;
+        font-size: 0.64em;
+    }
+    .banner .banner-desc p{
+        display: none;
+    }
+    .research .h-list ul {
+        width: 100%;
+    }
+}
+@media (min-width: 320px) and (max-width: 991.98px) {
+    .research .lorem-p p{
+        width: 100%;
+    }
+    .research .h-content {
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    .research .content-left {
+        padding-left: .5rem;
+        padding-top: 0;
+        width: 40%;
+    }
+    .research .content-right {
+        width: 60%;
+        padding: 0 0.5rem 1rem;
+    }
+    .research .research1{
+        width: 100%;
+    }
+    .research .research1 img{
+        margin: auto;
+    }
+    .logo-ft {
+        display: none;
+    }
+    
+    .footer .row .menu-ft > *,
+    .footer .row .contact-ft > * {
+        padding: 0.4em 0;
+    }
+
+    .partner-content > * {
+        padding-bottom: 1.5em;
+    }
+    .banner .banner-desc {
+        transform: translate(0rem, 2rem);
+        width: 70% !important;
+    }
+    .banner .banner-desc .home-btn{
+        display: none;
+    }
+    .join {
+        margin-bottom: 1rem;
+    }
+    .welcome-title h2{
+        width: 75%;
+        margin: 0 auto;
+        padding-top: 2rem;
+    }
+    
+}
+@media (max-width: 1450px) and (min-width: 992px) {
+    .partner .card .card-body {
+        padding: 4rem 4em 2em;
+    }
+}
+/*@media (min-width: 1200px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1400px) {
+    html {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 1920px) {
+    html {
+        font-size: 25px;
+    }
+
+    .container {
+        max-width: 1440px;
+    }
+}*/

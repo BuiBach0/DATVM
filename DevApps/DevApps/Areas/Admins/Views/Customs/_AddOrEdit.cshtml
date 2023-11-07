@@ -1,0 +1,46 @@
+﻿
+<div class="collapse border show objInfor">
+    <div class="alert-danger mb-3 admins-h2 btn-red">
+        CUSTOM
+    </div>
+    <div class="form-group mb-3">
+        <label class="font-weight-bold mb-1">Name <small>[Title]</small></label>
+        <input type="text" name="NAME" class="form-control" id="NAME" value="" maxlength="300">
+    </div>
+    <div class="form-group mb-3">
+        <label class="font-weight-bold mb-1">Phone</label>
+        <input type="text" name="PHONE" class="form-control" id="PHONE" value="" maxlength="300">
+    </div>
+    <div class="form-group mb-3">
+        <label class="font-weight-bold mb-1">Email</label>
+        <input type="text" name="EMAIL" class="form-control" id="EMAIL" value="" maxlength="300">
+    </div>
+
+    <div class="form-group mb-3">
+        <label class="font-weight-bold mb-1">Company</label>
+        <input type="text" name="COMPANY" class="form-control" id="COMPANY" value="" maxlength="300">
+    </div>
+
+    <div class="form-group mb-3">
+        <label class="font-weight-bold mb-1">Mô tả</label>
+        <textarea class="form-control" name="DESCRIPTIONS" rows="3" id="description"></textarea>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 text-right mr-0 pr-0 mt-1 mb-0 modal-footer">
+            <button type="button" class="btn btn btn-red btnCancel"><i class="fas fa-reply-all"></i> Nhập lại</button>
+            <button type="button" class="btn btn-green btnSave" data-id="0"> <i class="far fa-save"></i> Ghi lại</button>
+        </div>
+    </div>
+    <div hidden>
+        <input type="text" name="ID" id="ID" value="0" />
+        <input type="text" name="CREATE_DATE" value="@DateTime.Now" />
+        <input type="text" name="UPDATE_DATE" value="@DateTime.Now" />
+        <input type="text" name="ADMIN_CREATE" value="" />
+        <input type="text" name="ADMIN_UPDATE" value="" />
+    </div>
+</div>
+
+
+
+

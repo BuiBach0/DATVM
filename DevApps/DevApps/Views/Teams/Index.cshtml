@@ -1,0 +1,287 @@
+﻿@model IEnumerable<DevApps.ModelsView.ModelsNews>
+@{
+    var lead = ViewBag.leader as IEnumerable<DevApps.Models.LEADER_TEAM>;
+    var bannerUs = ViewBag.bannerUs as IEnumerable<DevApps.Models.BANNER>;
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var stt = 1;
+}
+
+
+@if ((int)Session["language"] == 1)
+{
+    <div class="team-wrapper">
+        <section class="banner-team">
+            @foreach (var item in bannerUs)
+            {
+                if (item.ORDER == 5)
+                {
+                    <div class="banner-img position-relative">
+                        <img src="@item.IMAGE" alt="banner" class="w-100" />
+                    </div>
+                    <div class="banner-desc container position-absolute">
+                        <h2>@item.TITLE</h2>
+                        <p class="text-justify">
+                            @item.DESCRIPTION
+                        </p>
+                    </div>
+                }
+            }
+
+            @*<div class="banner-img position-relative">
+                    <img src="~/Content/images/TEAM/Team-1.png" alt="banner" class="w-100" />
+                </div>
+                <div class="banner-desc container position-absolute">
+                    <h2>Our Vision</h2>
+                    <p class="text-justify">
+                        We strive to help change the
+                        world with Blockchain technology
+                    </p>
+                </div>*@
+        </section>
+        <!-- Reason -->
+        @foreach (var item in Model)
+        {
+            if (stt == 1)
+            {
+                <section class="reason container">
+                    <div class="row">
+                        @foreach (var val in item.news)
+                        {
+                            <div class="reason-item col-lg-4">
+                                <div class="img">
+                                    <img src="@val.IMAGE" alt="@val.TITLE">
+                                </div>
+                                <div>
+                                    <div>
+                                        @Html.Raw(val.DESCRIPTION)
+                                    </div>
+                                </div>
+                            </div>
+
+                        }
+                    </div>
+                </section>
+            }
+            if (stt == 2)
+            {
+                <section class="slide-team-wrap">
+                    <div class="slide-team">
+                        @foreach (var val in item.news)
+                        {
+                            <div class="slide-team-item">
+                                <img src="@val.IMAGE" alt="@val.TITLE" />
+                            </div>
+                        }
+                    </div>
+                </section>
+            }
+            if (stt == 3)
+            {
+                <section class="leader container">
+                    <div class="leader-title text-center text-uppercase">
+                        <h2>@item.cate.TITLE</h2>
+                        <h4>
+                            @Html.Raw(item.cate.DESCRIPTION)
+                        </h4>
+                    </div>
+                    <div class="leader-content row">
+                        @foreach (var val in lead)
+                        {
+                            <div class="col-lg-3 col-6 cusPad">
+                                <div class="leader-item text-center">
+                                    <div class="img d-flex justify-content-center align-content-center">
+                                        <img src="@val.IMAGE" alt="@val.NAME" class="w-100">
+                                    </div>
+                                    <div class="info">
+                                        <h3>@val.NAME</h3>
+                                        <p>@val.DESCRIPTION</p>
+                                    </div>
+                                    <div class="social d-flex justify-content-center align-content-center">
+                                        <div class="mr-2">
+                                            <a href="@val.INSTAGRAM"><i class="fab fa-linkedin-in"></i></a>
+                                        </div>
+                                        <div>
+                                            <a href="@val.TWITTER"> <i class="fab fa-twitter"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </section>
+            }
+
+            stt++;
+        }
+
+        <!-- Slick Team -->
+        <!-- Leader -->
+        <!-- Our Partner -->
+
+        <section class="team-partner">
+            @foreach (var item in bannerUs)
+            {
+                if (item.ORDER == 7)
+                {
+                    <div class="box">
+                        <div class="partner-img">
+                            <img src="@item.IMAGE" alt="banner" class="w-100" />
+                        </div>
+                        <div class="partner-title  text-center">
+                            <div class="container">
+                                <h2 class="text-uppercase">@item.TITLE</h2>
+                                <h4>
+                                    @item.DESCRIPTION
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+
+        </section>
+
+
+    </div>
+    <!-- end wrapper -->
+}
+else
+{
+    <div class="team-wrapper">
+        <section class="banner-team">
+            @foreach (var item in bannerUs)
+            {
+                if (item.ORDER == 5)
+                {
+                    <div class="banner-img position-relative">
+                        <img src="@item.IMAGE" alt="banner" class="w-100" />
+                    </div>
+                    <div class="banner-desc container position-absolute">
+                        <h2>@item.TITLE_EN</h2>
+                        <p class="text-justify">
+                            @item.DESCRIPTION_EN
+                        </p>
+                    </div>
+                }
+            }
+
+            @*<div class="banner-img position-relative">
+                    <img src="~/Content/images/TEAM/Team-1.png" alt="banner" class="w-100" />
+                </div>
+                <div class="banner-desc container position-absolute">
+                    <h2>Our Vision</h2>
+                    <p class="text-justify">
+                        We strive to help change the
+                        world with Blockchain technology
+                    </p>
+                </div>*@
+        </section>
+        <!-- Reason -->
+        @foreach (var item in Model)
+        {
+            if (stt == 1)
+            {
+                <section class="reason container">
+                    <div class="row">
+                        @foreach (var val in item.news)
+                        {
+                            <div class="reason-item col-lg-4">
+                                <div class="img">
+                                    <img src="@val.IMAGE" alt="@val.TITLE_EN">
+                                </div>
+                                <div>
+                                    <div>
+                                        @Html.Raw(val.DESCRIPTION_EN)
+                                    </div>
+                                </div>
+                            </div>
+
+                        }
+                    </div>
+                </section>
+            }
+            if (stt == 2)
+            {
+                <section class="slide-team-wrap">
+                    <div class="slide-team">
+                        @foreach (var val in item.news)
+                        {
+                            <div class="slide-team-item">
+                                <img src="@val.IMAGE" alt="@val.TITLE_EN" />
+                            </div>
+                        }
+                    </div>
+                </section>
+            }
+            if (stt == 3)
+            {
+                <section class="leader container">
+                    <div class="leader-title text-center text-uppercase">
+                        <h2>@item.cate.TITLE</h2>
+                        <h4>
+                            @Html.Raw(item.cate.DESCRIPTION_EN)
+                        </h4>
+                    </div>
+                    <div class="leader-content row">
+                        @foreach (var val in lead)
+                        {
+                            <div class="col-lg-3 col-6 cusPad">
+                                <div class="leader-item text-center">
+                                    <div class="img d-flex justify-content-center align-content-center">
+                                        <img src="@val.IMAGE" alt="@val.NAME" class="w-100">
+                                    </div>
+                                    <div class="info">
+                                        <h3>@val.NAME</h3>
+                                        <p>@val.DESCRIPTION</p>
+                                    </div>
+                                    <div class="social d-flex justify-content-center align-content-center">
+                                        <div class="mr-2">
+                                            <a href="@val.INSTAGRAM"><i class="fab fa-linkedin-in"></i></a>
+                                        </div>
+                                        <div>
+                                            <a href="@val.TWITTER"> <i class="fab fa-twitter"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </section>
+            }
+
+            stt++;
+        }
+
+        <!-- Slick Team -->
+        <!-- Leader -->
+        <!-- Our Partner -->
+
+        <section class="team-partner">
+            @foreach (var item in bannerUs)
+            {
+                if (item.ORDER == 7)
+                {
+                    <div class="box">
+                        <div class="partner-img">
+                            <img src="@item.IMAGE" alt="banner" class="w-100" />
+                        </div>
+                        <div class="partner-title  text-center">
+                            <div class="container">
+                                <h2 class="text-uppercase">@item.TITLE_EN</h2>
+                                <h4>
+                                    @item.DESCRIPTION_EN
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+
+        </section>
+
+
+    </div>
+    <!-- end wrapper -->
+}
+

@@ -1,0 +1,268 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.new-item .box-item {
+    position: relative;
+    bottom: 10px;
+}
+
+.new-item {
+    padding: 0 0.75rem 0 0;
+}
+
+    .new-item:last-child {
+        padding-right: 0;
+    }
+
+    .new-item .box-item .new-title {
+        position: absolute;
+        bottom: 3%;
+        left: 5%;
+        right: 5%;
+    }
+
+        .new-item .box-item .new-title h3 a {
+            color: #1670c5;
+            font-weight: bold;
+            background: #ffffff;
+            padding: 0.3rem 2rem;
+            font-size: 1rem;
+        }
+
+        .new-item .box-item .new-title h5 a {
+            color: #fff;
+            font-size: 1.1rem;
+            margin: 0.5rem 0rem 0.5rem 0;
+        }
+
+        .new-item .box-item .new-title p {
+            color: #fff;
+            font-size: 1rem;
+        }
+
+.news-items .content {
+    background: #fff;
+    margin-top: 1rem;
+    padding: 1rem 1.35rem;
+}
+
+    .news-items .content h6 {
+        font-size: 1.1rem;
+    }
+
+    .news-items .content p {
+        font-size: 0.9rem;
+    }
+
+.rich-news > div:nth-child(1) {
+    grid-area: first;
+}
+
+.rich-news > div:nth-child(2) {
+    grid-area: second;
+    display: flex;
+}
+
+.rich-news > div:nth-child(3) {
+    grid-area: third;
+    display: flex;
+}
+
+.rich-news {
+    display: grid;
+    grid-template: 'second second  first' 'third third first ';
+    grid-template-columns: 33% 27% 40%;
+}
+
+    .rich-news .rich-item {
+        background: none;
+        padding: 0.5rem;
+    }
+
+
+    .rich-news .news-more {
+        margin-top: 5.5rem;
+    }
+
+    .rich-news .special {
+        margin-top: 3.95rem;
+    }
+
+    .rich-news .rich-item:nth-child(1) {
+        background: none;
+        padding: 0rem;
+    }
+
+    .rich-news .rich-item .description {
+        position: relative;
+        padding: 0rem 1rem;
+        width: 56%;
+    }
+
+    .rich-news .rich-item:nth-child(1) .description {
+        padding: 0.75rem 0rem;
+        width: auto;
+    }
+
+    .rich-news .rich-item h5 {
+        font-size: 1.1rem;
+    }
+
+    .rich-news .rich-item a {
+        bottom: 0;
+        font-size: 1rem;
+        padding: 0.5rem 2.2rem;
+        border: 1px solid #1d1d1d;
+        margin-top: 2rem;
+    }
+
+.rich-content-wrapper .news-items .img img {
+    height: 100%;
+}
+
+.rich-content-wrapper .news-items .box-new {
+    padding: 0 0.75rem 0 0;
+    flex: 1;
+}
+
+    .rich-content-wrapper .news-items .box-new:last-child {
+        padding-right: 0;
+    }
+
+@media only screen and (max-width: 1025px) {
+    .rich-news .news-more {
+        margin-top: 2.25rem;
+    }
+
+    .rich-news .rich-item:nth-child(1) .news-more {
+        margin-top: 0rem;
+    }
+
+    .rich-news {
+        grid-template-columns: 31% 25% 44%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    html {
+        font-size: 18px;
+    }
+
+    .hots-items > div {
+        flex-wrap: wrap;
+    }
+
+    .new-item {
+        padding: 0;
+        height: auto;
+    }
+
+        .new-item:nth-child(1) {
+            width: 100%;
+        }
+
+        .new-item:nth-child(2), .new-item:nth-child(3) {
+            width: 49.5%;
+            margin-top: .3em;
+        }
+
+        .new-item .box-item {
+            height: auto;
+        }
+
+        .new-item img {
+            height: auto;
+        }
+
+        .new-item .box-item .new-title h3 a {
+            padding: 0.3rem 1rem;
+        }
+
+        .new-item .box-item .new-title h5 a {
+            font-size: 1rem;
+        }
+
+        .new-item .box-item .new-title p {
+            font-size: 0.8rem;
+        }
+
+    .rich-news > div:nth-child(2) {
+        display: block;
+    }
+
+    .rich-news > div:nth-child(3) {
+        display: block;
+    }
+
+    .rich-news {
+        display: grid;
+        grid-template: 'first first' 'second third';
+    }
+
+        .rich-news .rich-item a {
+            padding: 0.5rem 1.5rem;
+        }
+
+        .rich-news .rich-item .description {
+            padding: 0.75rem 0rem;
+            width: auto;
+        }
+
+            .rich-news .rich-item .description p {
+                font-size: 0.8rem;
+            }
+
+        .rich-news .news-more {
+            margin: 0rem;
+        }
+
+    .box-new {
+        padding: 0.5rem !important;
+    }
+
+        .box-new .content {
+            padding: 0.5rem;
+        }
+
+            .box-new .content h6 {
+                font-size: 0.9rem;
+            }
+
+            .box-new .content p {
+                font-size: 0.8rem;
+            }
+
+            .box-new .content span {
+                font-size: 0.8rem;
+                padding: 0 !important;
+            }
+
+            .box-new .content hr{
+                margin : 0.5rem 0rem;
+            }
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    html {
+        font-size: 14px;
+    }
+}

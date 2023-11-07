@@ -1,0 +1,131 @@
+﻿ <!-- Main Sidebar Container -->
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="/admins" class="brand-link">
+        <img src="~/Areas/Admins/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+             style="opacity: .8">
+        <span class="brand-text font-weight-light">Quản trị hệ thống</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <!-- Sidebar user panel (optional) -->
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+            <div class="image">
+                <img src="~/Areas/Admins/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+            </div>
+            <div class="info   w-100  ">
+                <a href="#" class="d-block">@User.Identity.Name</a>
+                @using (Html.BeginForm("LogOff", "Accounts", FormMethod.Post, new { id = "logoutForm" }))
+                {
+                    @Html.AntiForgeryToken()
+                     
+                    <a href="javascript:document.getElementById('logoutForm').submit()" class="right">
+                        <span class="right badge badge-danger">Đăng xuất</span>
+                    </a>
+                     
+                }
+            </div>
+
+        </div>
+
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                <!-- Add icons to the links using the .nav-icon class
+    with font-awesome or any other icon font library -->
+                <li class="nav-item ">
+                    <a href="/admins" class="nav-link">
+                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <p>
+                            Bảng điều khiển
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/admins/Accounts" class="nav-link">
+                        <i class="nav-icon far fa-user"></i>
+                        <p>
+                            Quản lý tài khoản
+                        </p>
+                    </a>
+                </li>
+
+
+                <li class="nav-item">
+                    <a href="/admins/Banner" class="nav-link">
+                        <i class="nav-icon fas fa-chalkboard"></i>
+                        <p>
+                            Quản lý Banner
+                        </p>
+                    </a>
+                </li>
+
+
+
+                <li class="nav-item">
+                    <a href="/admins/Categorys" class="nav-link">
+                        <i class="nav-icon far fa-address-book"></i>
+                        <p>
+                            Quản lý Category
+
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/admins/News" class="nav-link">
+                        <i class="nav-icon far fa-address-book"></i>
+                        <p>
+                            Quản lý News
+
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/admins/LEADERTEAMs" class="nav-link">
+                        <i class="nav-icon far fa-address-book"></i>
+                        <p>
+                            Quản lý Leader
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/admins/Customs" class="nav-link">
+                        <i class="nav-icon far fa-address-book"></i>
+                        <p>
+                            Quản lý User
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/admins/CompanyAddress" class="nav-link">
+                        <i class="nav-icon fas fa-hands-helping"></i>
+                        <p>
+                            Địa chỉ công ty
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/admins/CompanyInfor" class="nav-link">
+                        <i class="nav-icon fas fa-hands-helping"></i>
+                        <p>
+                            Thông tin công ty
+                        </p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="/" class="nav-link">
+                        <i class="fas fa-link nav-icon"></i>
+                        <p>
+                            Simple Link
+                            <span class="right badge badge-danger">New</span>
+                        </p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+</aside>

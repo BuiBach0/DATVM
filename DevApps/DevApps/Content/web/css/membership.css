@@ -1,0 +1,324 @@
+﻿.membership{
+    padding: 1em 0 2em 0  ; 
+    background: #fff;  
+}
+.membership .sub-title{
+    font-family: 'Sarabun-Bold';  
+    color: #003d64;  
+    font-size: .72em;  
+    margin-bottom: 2em;    
+}
+.membership .title{
+    color: #003d64;  
+    font-size: 1.2em;  
+    margin-bottom: 1em;  
+}
+.membership .box-slider{
+    margin: 1em 0 ;  
+}
+.membership .list-member .top{
+    height: 3.2em;  
+    background: #003d64;   
+    color: #fff;  
+    position: relative;  
+}
+.membership .list-member .top img{
+    position:absolute;  
+    left: 50%;  
+    top: 100%;
+    transform: translateX(-50%);  
+}
+.membership .list-member .box{
+    padding: 15px;  
+}
+.membership .list-member .top a{
+   font-family: 'Sarabun-Bold';  
+   font-size: .72em;  
+   color: #fff;  
+}
+.membership .list-member .content{
+    padding: 1.2em .8em 0 .8em;   
+    text-align: justify;  
+    height: 13em;  
+}
+.membership .list-member .content .price{
+    font-family: 'Sarabun-Italic';
+    color: #003d64;  
+    font-size: .96em;  
+    margin-bottom: .4em;
+}
+.membership .list-member .content .price strong{
+    font-size: 2.65em; 
+    font-family: 'Sarabun-Bold';  
+}
+.membership .list-member .content .desc{
+    font-family: 'Sarabun-Regular';  
+    color: #003d64;  
+    font-size: .72em;  
+    height: 4.5em;  
+    overflow: hidden;  
+}
+.membership .list-member .content a{
+    display: inline-block;  
+    font-size: .6em;  
+    background: #003d64;  
+    color: #fff;  
+    padding: .5em 1.5em .4em 1.5em;  
+}
+.membership .list-member .item{
+    position: relative;  
+}
+.membership .list-member .item::before{
+    position:absolute; 
+    content: ""; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;  
+    background: #0000005c; 
+    z-index: 99;  
+}
+.membership .list-member .item:hover, .membership .list-member .slick-list .slick-slide.slick-current.slick-active .item{
+    box-shadow: 0 0 12px #000; 
+}
+.membership .list-member .item:hover::before, .membership .list-member .slick-list .slick-slide.slick-current.slick-active .item::before {
+    display: none;  
+}
+
+.membership .list-member .slick-arrow img{
+    width: 1.8rem;  
+}
+.membership .list-member .slick-next{
+    right: -1rem;  
+    left: auto;  
+}
+.membership .list-member .slick-prev{
+    left: -1rem; 
+}
+.membership .box-become .content p{
+    font-size: .72em;  
+    font-family: 'Sarabun-Regular';
+    text-align: justify;  
+}
+.membership .box-become .link, .membership .box-become .join-now{
+    font-size: .72em;  
+    font-family: 'Sarabun-Regular';
+    background: #003d64;  
+    color: #fff;  
+    padding: .6em 1em;  
+}
+.membership .box-become .join-now{
+    font-size: .96em;  
+     padding: .7em 1.5em; 
+}
+.membership table td{
+    font-size: .72em;   
+    width: 72%;  
+}
+.membership table thead th{
+    background: #003d64;  
+    color: #fff; 
+    padding: 1em; 
+    font-size: .8em; 
+}
+.membership table tbody td{
+    background: #f6f6f6; 
+    padding: 1em; 
+    font-size: .72em;  
+    font-family: 'Sarabun-Regular';
+}
+.membership table tbody tr td{
+    vertical-align: middle; 
+}
+.membership table tbody tr td:last-child{
+    text-align: center; 
+}
+.membership table tbody tr td img{
+    width:  2em;  
+}
+.membership .table-bordered td, .membership .table-bordered th {
+    border: 2px solid #fff;  
+}
+.membership .become-to-member .content p{
+    font-size: .96em; 
+}
+.membership .info-member{
+    padding: 2.5em 1.2em ;  
+    background: #003d64;  
+    margin-top: 6em;  
+    font-size: 20px; 
+}
+.membership .info-member .avatar{
+    display: flex;  
+    justify-content: center;  
+}
+.membership .info-member .avatar img{
+    width: 8.5em;  
+    margin-top: -8em;
+}
+.membership .info-member .join-us p{
+    color: #fff;  
+    font-size:  1.2em;   
+    margin-bottom: .6em;  
+    text-align: center;  
+    font-family: 'Sarabun-Italic';
+}
+.membership .info-member .join-us p:last-child{
+    margin-bottom: 0;  
+}
+.membership .info-member .desc, .membership .info-member .content {
+    color: #fff;  
+    font-size: .72em;  
+}
+
+.membership .info-member ul li{
+    width: 100%;  
+    font-size: .56em;  
+    font-family: 'Sarabun-Italic';
+    color: #fff;  
+    margin-bottom: 1em;  
+}
+.membership .info-member ul li img{
+    margin: -10px 3px 0 0 ; 
+}
+.membership .info-member .link-become{
+    background: #fff;  
+    font-size: .72em;  
+    width: 100%;  
+    display: inline-block;  
+    padding: .5em;  
+    
+}
+.membership .become-feature{
+    padding: 1em; 
+    background: #f6f6f6;    
+}
+.membership .become-feature .title-box{
+    color: #003d64;   
+}
+.membership .become-feature  img{
+    margin: 1em 0 ;  
+}
+.membership .become-feature .desc{
+    font-size: .64em;  
+}
+.about-us{
+    padding: 1.6em 0 ;
+    background: #fff;  
+}
+.about-us .title{
+    color: #003d64;   
+    font-family: 'Sarabun-Bold';
+    font-size: 1.2em;  
+}
+.about-us .content p, .about-us .link{
+    font-size: .96em;   
+    font-family: 'Sarabun-Regular';
+}
+.about-us .link{
+    color: #ec222a;   
+}
+.about-us .box-touch{
+    background: #f6f6f6;
+}
+.about-us .box-touch .main{
+    padding: 1em 1.4em 2em 1.4em;  
+}
+
+.about-us .box-touch .main .title-box{
+    color: #003d64;   
+    font-family: 'Sarabun-Regular';
+    font-size: 1.2em;  
+}
+.about-us .box-touch .main input{
+    width: 100%;   
+    margin-bottom: .8em;
+    padding: .8em 1.5em;  
+    border:none;  
+    font-size: .72em;  
+    font-family: 'Sarabun-Regular';
+}
+.about-us .box-touch .main input::placeholder{
+    color: #cdcbcb;  
+}
+.about-us .box-touch .main button{
+    width: 100%;  
+    margin-top: .5em;  
+    font-size: .72em;  
+    font-family: 'Sarabun-Regular';
+    border: none;  
+    background: #003d64;  
+    color: #fff;  
+    padding: .4em 0;  
+}
+@media only screen and (min-width: 768px){
+    .membership .info-member ul li{
+        width: 30%;  
+    }
+    .membership .info-member{
+        font-size: 25px; 
+    }
+    .membership .info-member .content{
+        margin: 1em 0 3em 0 ;  
+    }
+    .membership .box-slider{
+        margin: 1em -15px 2.5em -15px;  
+    }
+    .membership .list-member .slick-next{
+        right: -1.2rem;  
+    }
+    .membership .list-member .slick-prev{
+        left: -1.2rem; 
+    }
+    .about-us .box-touch .img{
+        width: 60%; 
+    }
+    .about-us .box-touch .main{
+        width: 40%;  
+        font-size: 13px;
+    }
+    .about-us .box-touch .main img{
+        max-width: 50%;  
+    }
+    .membership .list-member .item:hover .content a, .membership .list-member .slick-list .slick-slide.slick-current.slick-active .item .content a{
+        display: none;  
+    }
+}
+@media only screen and (min-width: 992px) {
+    .membership .info-member .join-us p{
+        text-align: right;  
+    }
+    .membership .info-member .avatar img{
+        width: 8.5em;  
+        margin: 0;  
+    }
+    .membership .info-member{
+        margin: 0 ;  
+        font-size: 1rem;  
+    }
+    .membership .info-member ul li{
+        width: 50%;  
+        margin-bottom: 2em;  
+    }
+    .about-us .box-touch .img{
+        width: 100%; 
+    }
+    .about-us .box-touch .main{
+        width: 100%;  
+        font-size: 1rem;
+    }
+    .about-us .box-touch .main img{
+        max-width: 50%;  
+    }
+}
+@media only screen and (min-width: 1400px){
+    .membership .info-member ul li{
+        margin-bottom: 1em;  
+    }
+    .membership .list-member .slick-next{
+        right: -2.5rem;  
+    }
+    .membership .list-member .slick-prev{
+        left: -2.5rem; 
+    }
+}

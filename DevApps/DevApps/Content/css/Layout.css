@@ -1,0 +1,381 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    padding-top: 0rem !important;
+}
+
+html {
+    font-size: 25px !important;
+}
+
+.container {
+    width: 75% !important;
+    max-width: 76% !important;
+}
+
+p {
+    font-size: 0.96rem;
+}
+
+h2, h4, h5, h6 {
+    font-family: 'Sarabun-Bold' !important;
+}
+
+h2 {
+    font-size: 1.92rem !important;
+}
+
+h3 {
+    font-size: 1.44rem !important;
+    font-family: 'Sarabun-Medium' !important;
+}
+
+h4 {
+    font-size: 1.2rem !important;
+}
+
+a {
+    font-family: 'Sarabun-Medium';
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.w-70 {
+    width: 70%;
+}
+
+header {
+    margin-bottom: 0.5rem;
+}
+
+header {
+    position: fixed;
+    z-index: 999;
+    background-color: rgba(255,255,255,0.0);
+    width: 100%;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    top: 0;
+}
+
+    header.active {
+        background: #fff;
+    }
+
+.layout .menu .option, footer .menu .option {
+    font-size: 0.96rem;
+    color: #26194e;
+}
+
+.layout .menu ul li a {
+    font-family: 'Sarabun-Bold';
+    text-decoration: none;
+}
+
+.layout .menu ul li:last-child a {
+    color: #c5ad3d;
+    cursor: pointer;
+}
+
+.layout .logo {
+    width: 6.2rem;
+    height: 3.4rem;
+}
+/*menu mb*/
+.layout button.active span {
+    transform: rotateZ(45deg);
+    top: 50%;
+    width: 1.5rem;
+    border-radius: 5px;
+}
+
+    .layout button.active span:nth-child(2) {
+        display: none;
+    }
+
+    .layout button.active span:nth-child(3) {
+        transform: rotateZ(-45deg);
+    }
+
+footer .logo {
+    margin-right: 0.48rem;
+    width: 3.52rem;
+    height: 2rem;
+}
+
+footer .menu {
+    margin-top: 0.25rem;
+}
+
+.choose-option .option:hover {
+    border-bottom: 0.2rem solid #261a4e;
+    text-decoration: none;
+}
+
+footer .logo-footer {
+    width: 3.6rem;
+    height: 2rem;
+    margin-right: 0.48rem;
+}
+
+footer .mxh {
+    background-color: #261a4e;
+    width: 2.15rem;
+    height: 2.1rem;
+    margin-left: 0.72rem;
+    border-radius: 50%;
+    transform: translateY(-2px);
+}
+
+footer .right-footer .mxh:last-child {
+    margin-left: 0.3rem;
+}
+
+footer .mxh i {
+    color: #fff;
+    font-size: 1.1rem;
+    transform: translate(55%, 50%);
+}
+
+footer .ft-contact {
+    font-size: 1.2rem;
+    color: #26194e;
+}
+
+footer .menu .option {
+    margin: 0 0.72rem;
+    text-decoration: none;
+}
+
+@media (min-width: 1751px) and (max-width: 1849px) {
+    html {
+        font-size: 23.5px !important;
+    }
+}
+
+@media (min-width: 1701px) and (max-width: 1750px) {
+    html {
+        font-size: 22px !important;
+    }
+}
+
+@media (min-width: 1601px) and (max-width: 1700px) {
+    html {
+        font-size: 21.5px !important;
+    }
+}
+
+@media (min-width: 1520px) and (max-width: 1600px) {
+    html {
+        font-size: 20.5px !important;
+    }
+}
+
+@media (min-width: 1490px) and (max-width: 1564px) {
+    html {
+        font-size: 19.8px !important;
+    }
+}
+
+@media (min-width: 1451px) and (max-width: 1519px) {
+    html {
+        font-size: 19.2px !important;
+    }
+}
+
+@media (min-width: 1370px) and (max-width: 1450px) {
+    html {
+        font-size: 18.5px !important;
+    }
+}
+
+@media (min-width: 1300px) and (max-width: 1369px) {
+    html {
+        font-size: 17.5px !important;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1299px) {
+    html {
+        font-size: 16px !important;
+    }
+}
+
+@media (min-width: 1141px) and (max-width: 1199px) {
+    html {
+        font-size: 14.8px !important;
+    }
+}
+
+@media (min-width: 1030px ) and (max-width: 1140px) {
+    html {
+        font-size: 13.5px !important;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1025px) {
+    html {
+        font-size: 13px !important;
+    }
+}
+
+@media (min-width: 756px) and (max-width: 991px) {
+    html {
+        font-size: 25px !important;
+    }
+}
+
+@media (min-width: 578px) and (max-width: 756px) {
+    html {
+        font-size: 20px !important;
+    }
+
+    .container {
+        width: 80% !important;
+    }
+}
+
+@media (min-width: 475px) and (max-width: 577px) {
+    html {
+        font-size: 17px !important;
+    }
+}
+
+@media (min-width: 416px) and (max-width: 474px) {
+    html {
+        font-size: 15.5px !important;
+    }
+}
+@media (min-width: 414.5px) and (max-width: 415.9px) {
+    header{
+        width: 415px;
+    }
+}
+@media (max-width: 991px) {
+    body {
+        padding-top: 0rem !important;
+    }
+    header {
+        padding-top: 1rem;
+        padding-bottom: 0;
+    }
+    div p {
+        font-size: 1rem !important;
+    }
+
+    h2 {
+        font-size: 2rem !important;
+    }
+
+    h3 {
+        font-size: 1.5rem !important;
+    }
+
+    h4 {
+        font-size: 1.25rem !important;
+    }
+
+    .layout .logo {
+        width: 4.2rem;
+        height: 2.4rem;
+        justify-content: end;
+    }
+
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        max-width: 100% !important;
+    }
+
+    .btn-menu-mobie {
+        position: relative;
+        height: 1rem;
+        width: 1.5rem;
+        background-color: transparent;
+        flex-flow: column;
+        justify-content: space-between;
+    }
+
+    .btn-menu-mobie {
+        border: none;
+    }
+    .btn-menu-mobie:focus {
+        outline: none;
+    }
+
+    .btn-menu-mobie span {
+        border-top: 3px solid #000;
+        width: 1.25rem;
+        position: absolute;
+        transform: translateX(15%);
+        line-height: 1rem;
+    }
+
+    header .logo img {
+        width: 4rem;
+    }
+
+    header nav {
+        display: none !important;
+    }
+
+    header nav.show {
+        display: block;
+        position: absolute;
+        width: 50vw;
+        z-index: 99999;
+        left: 0rem;
+        padding-left: 15px;
+        background-color: #fff;
+    }
+
+    .show-menu nav ul {
+        height: 70vh;
+        background-color: #fff;
+        
+    }
+
+        .show-menu nav ul li {
+            margin: 2rem 1rem 1rem;
+        }
+
+    .btn-menu-mobie span:nth-child(2) {
+        top: 50%;
+    }
+
+    .btn-menu-mobie span:nth-child(3) {
+        top: 100%;
+    }
+
+    header nav ul li a,
+    footer nav ul li a {
+        color: #26194e !important;
+        font-size: 1rem;
+    }
+
+    footer .mxh {
+        margin-left: 0rem;
+    }
+
+        footer .mxh i {
+            transform: translate(0,45%);
+        }
+
+    .container {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
+
+@media (max-width: 415px) {
+    html {
+        font-size: 14px !important;
+    }
+}

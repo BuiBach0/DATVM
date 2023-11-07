@@ -1,0 +1,106 @@
+﻿@{
+    var cate = ViewBag.cate as IEnumerable<DevApps.Models.CATEGORY>;
+}
+<div class="collapse border show objInfor">
+    <div class="alert-danger mb-3 admins-h2 btn-red">
+        NEWS
+    </div>
+    <div class="form-group mb-3">
+        <label class="font-weight-bold mb-1">Tiêu đề <small>[Title]</small></label>
+        <input type="text" name="TITLE" class="form-control" id="title" value="" maxlength="300">
+    </div>
+    <div class="form-group mb-3">
+        <label class="font-weight-bold mb-1">TITLE_EN <small>[Title]</small></label>
+        <input type="text" name="TITLE_EN" class="form-control" id="title-en" value="" maxlength="300">
+    </div>
+
+    @*??*@
+    <div class="form-group mb-3">
+        <label class="font-weight-bold mb-1">SUB_TITLE <small>[Title]</small></label>
+        <input type="text" name="SUB_TITLE" class="form-control" id="sub-title" value="" maxlength="300">
+    </div>
+    <div class="form-group mb-3">
+        <label class="font-weight-bold mb-1">SUB_TITLE_EN <small>[Title]</small></label>
+        <input type="text" name="SUB_TITLE_EN" class="form-control" id="sub-title-en" value="" maxlength="300">
+    </div>
+
+
+    <div class="form-group mb-3">
+        <label class="font-weight-bold mb-1">URLS</label>
+        <input type="text" name="SLUG" class="form-control" id="slug" value="" maxlength="300">
+    </div>
+    <div class="form-group mb-3">
+        <label class="font-weight-bold mb-1">URLS_EN</label>
+        <input type="text" name="SLUG_EN" class="form-control" id="slug-en" value="" maxlength="300">
+    </div>
+
+    <div class=" mb-3">
+        <h6 class="input-group-text">IMAGE</h6>
+        <input type="hidden" name="IMAGE" value="/Content/images/no-image-available-thumb(1349x760-crop).jpg" id="image" />
+        <img src="/Content/images/no-image-available-thumb(1349x760-crop).jpg" alt="ảnh banner" class="img-size w-100" title="Cập nhật" id="show-img" />
+    </div>
+
+
+    <div class="form-group mb-3">
+        <label class="font-weight-bold mb-1">Mô tả</label>
+        <textarea class="form-control ckeditor" name="DESCRIPTION" rows="3" id="description"></textarea>
+    </div>
+    <div class="form-group mb-3">
+        <label class="font-weight-bold mb-1">DESC_EN</label>
+        <textarea class="form-control ckeditor" name="DESCRIPTION_EN" rows="3" id="description-en"></textarea>
+    </div>
+
+    <div class="form-group mb-3">
+        <label class="font-weight-bold mb-1">Thứ tự</label>
+        <input type="number" name="ORDER" class="form-control" id="ORDER" value="0">
+    </div>
+
+
+
+    <div class="form-group mb-3">
+        <label class="font-weight-bold mb-1">Hiển Thị</label>
+        @*<input type="number" name="ORDER" class="form-control" id="ORDER" value="0">*@
+        <select name="CATEGORY_ID" class="form-control" id="CATEGORY_ID">
+            <option value="0">--Chọn danh mục--</option>
+            @foreach (var item in cate)
+            {
+                <option value="@item.ID">@item.TITLE</option>
+
+            }
+        </select>
+    </div>
+    @*<div class="form-group mb-3">
+            <label class="font-weight-bold mb-3">Vị trí</label>
+            <input type="radio" name="IS_HOME" id="home" value="true" checked class="ml-4"><label for="home" class="mt-1 ml-2">Home</label>
+            <input type="radio" name="IS_HOME" id="product" value="false" class="ml-4"><label for="product" class="mt-1 ml-2">Product</label>
+        </div>*@
+
+    <div class="form-group mb-3">
+        <label class="font-weight-bold mb-1">Trạng thái</label>
+        <input type="radio" name="STATUS" id="s1" data-value="1" value="1" class="ml-4" checked /> <label for="s1" class="mt-1 ml-2">Hoạt động</label>
+        <input type="radio" name="STATUS" id="s2" data-value="0" value="0" class="ml-4" /> <label for="s2" class="mt-1 ml-2">Đang khóa</label>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 text-right mr-0 pr-0 mt-1 mb-0 modal-footer">
+            <button type="button" class="btn btn btn-red btnCancel"><i class="fas fa-reply-all"></i> Nhập lại</button>
+            <button type="button" class="btn btn-green btnSave" data-id="0"> <i class="far fa-save"></i> Ghi lại</button>
+        </div>
+    </div>
+    <div hidden>
+        <input type="text" name="ID" id="ID" value="0" />
+        <input type="text" name="CREATED_DATE" value="@DateTime.Now" />
+        <input type="text" name="UPDATED_DATE" value="@DateTime.Now" />
+        <input type="text" name="ADMIN_CREATED" value="" />
+        <input type="text" name="ADMIN_UPDATED" value="" />
+    </div>
+</div>
+
+@section scripts{
+    <script>
+        CKEDITOR.replace('description');
+        CKEDITOR.replace('description-en');
+    </script>
+
+}
+

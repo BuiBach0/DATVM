@@ -1,0 +1,160 @@
+
+.logo img{
+    width:30%;
+    margin-left:1rem;
+}
+.d-flex{
+    display: flex;
+}
+.navbar-nav{
+    margin-right: 100px;
+}
+.banner {
+    width: 100%;
+}
+.banner h1  {
+    position: absolute;
+    top :300px;
+    left: 12.5rem;
+    color: white;
+}
+.banner p {
+    position: absolute;
+    top: 450px;
+    left: 12.5rem;
+    color: white;
+    font-size: 20px;
+}
+.banner button{
+    position: absolute;
+    top: 600px;
+    left: 12.5rem;
+    background-color: white;
+    font-weight: 700;
+    color:rgb(48, 79, 233);
+}
+.first.home{
+    margin: 60px;
+}
+.container-fluid{
+    margin-left: 20.5rem;
+    font-weight: 700;
+}
+.title{
+    text-align: center;
+}
+.title h1{
+    color: rgb(44, 14, 215);
+}
+.title p{
+    color:rgb(44, 14, 215);
+    font-weight: 10px;
+}
+@media (max-width: 700px) {
+		.carousel-inner .carousel-item > div {
+			display: none;
+		}
+		.carousel-inner .carousel-item > div:first-child {
+			display: block;
+		}
+	}
+
+	.carousel-inner .carousel-item.active,
+	.carousel-inner .carousel-item-next,
+	.carousel-inner .carousel-item-prev {
+		display: flex;
+	}
+
+	/* medium and up screens */
+	@media (min-width: 768px) {
+
+		.carousel-inner .carousel-item-end.active,
+		.carousel-inner .carousel-item-next {
+			transform: translateX(25%);
+		}
+
+		.carousel-inner .carousel-item-start.active, 
+		.carousel-inner .carousel-item-prev {
+			transform: translateX(-25%);
+		}
+	}
+
+	.carousel-inner .carousel-item-end,
+	.carousel-inner .carousel-item-start { 
+		transform: translateX(0);
+	}
+.text-center{
+    text-align: center;
+}
+.our-services h1 {
+    color:rgb(44, 14, 215);
+    font-weight: 600;
+}
+.our-services h5{
+    color:rgb(44, 14, 215);
+    font-weight: 300;
+}
+.our-services p{
+    color:rgb(44, 14, 215);
+    font-weight: 500;
+    size: 20px;
+}
+/* .box-1{
+    width: 50%;
+    height: 20%;
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10%;
+} */
+
+.text{
+    text-align: justify;
+}
+.box-shadow {
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 7px 7px 6px 7px gray;
+  }
+.our-services-img-1{
+    width: 50%;
+    margin-top:5.5rem;
+    background-color: rgb(53, 53, 235); 
+}
+.list-card{
+    margin-top: 100px;
+}
+.card-1 {
+    background: rgb(130, 139, 255);
+    background: linear-gradient(145deg, rgba(130, 139, 255, 1) 0%, rgba(33, 4, 254, 1) 100%);
+    margin-left: 50px;
+    border-radius: 3%;
+}
+
+ .card-2 {
+    background: rgb(151, 18, 251);
+    background: linear-gradient(145deg, rgba(151, 18, 251, 1) 0%, rgba(210, 1, 69, 1) 100%);
+    margin-left: 90px;
+    border-radius: 3%;
+}
+
+.card-3 {
+    background: rgb(249, 234, 70);
+    background: linear-gradient(145deg, rgba(249, 234, 70, 1) 0%, rgba(32, 176, 119, 1) 100%);
+    margin-left: 90px;
+    border-radius: 3%;
+}
+ .card-1:hover button,
+ .card-2:hover button,
+ .card-3:hover button{
+    display: block !important;
+}
+ .card-1 button:hover,
+ .card-2 button:hover,
+ .card-3 button:hover{
+    background-color: white !important;
+    color: rgba(0, 0, 0, 1) !important;
+}
+.contact{
+    margin-right: 80px;
+}

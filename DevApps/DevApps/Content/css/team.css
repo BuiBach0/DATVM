@@ -1,0 +1,223 @@
+.team-wrapper {
+    color: #333366;
+}
+.team-wrapper .banner-desc{
+    top: 0;
+    left: 0;
+    transform: translate(9.5rem, 12rem);
+    width: 36% !important;
+}
+.team-wrapper .banner-desc p {
+    font-size: 0.8rem;
+    font-family: 'Sarabun-Medium';
+    width: 91%;
+    color: #fff;
+}
+.team-wrapper .banner-desc h2 {
+    color: #fff;
+    text-transform: initial;
+}
+.team-wrapper .banner-desc p {
+    font-family: 'Sarabun-Medium';
+    font-size: 1.2rem;
+}
+/* Reason */
+.reason-item {
+    padding-top: 1.8rem;
+}
+
+.reason-item .img {
+    padding: 1rem 0;
+}
+
+.reason-item img {
+    width: 25%;
+}
+
+.reason-item p {
+    font-weight: 700;
+}
+
+/* Slick Team */
+.slide-team {
+    padding: 1.6rem 2.6rem 0;
+}
+
+.slide-team-item {
+    padding: 0.5rem;
+}
+.slide-team-item img{
+    border-radius: 0.6rem;
+}
+.slide-team .slick-dots {
+    position: unset;
+}
+
+.slick-dots li {
+    margin: 0 15px;
+}
+
+.slick-dots li button::before {
+    content: "";
+    opacity: 0.15;
+    border-bottom: 3px solid #333366;
+    padding: 0 20px;
+}
+
+/* Leader */
+.leader {
+    padding-top: 3.8rem;
+}
+
+.leader-title h4 {
+    width: 75%;
+    margin: auto;
+}
+
+.leader-content {
+    padding-top: 1.8rem;
+}
+
+.leader-item {
+    border: 1px solid #ccc;
+   padding: 1rem 0;
+}
+
+.leader-content .cusPad {
+    padding-bottom: 1.2rem;
+}
+
+.leader-content .leader-item .img img {
+    width: 80% !important;
+}
+
+.leader-content .leader-item .info {
+    padding-top: 1.2rem;
+    line-height: 1rem;
+}
+
+.leader-content .leader-item .info h3 {
+    font-family: 'Sarabun-Bold' !important;
+}
+
+.leader-content .leader-item .social i {
+    background: #333366;
+    color: #fff;
+    padding: .6rem;
+    border-radius: 50%;
+}
+
+/* Our Partners */
+.team-partner {
+    padding-top: 4rem;
+    margin-bottom: 3rem;
+}
+
+.team-partner .partner-title {
+    /* color: #fff; */
+}
+
+.team-partner .partner-title h4 {
+    width: 70%;
+    margin: auto;
+}
+.team-partner .box{
+    position: relative;  
+}
+.team-partner .partner-title{
+    position: absolute;  
+    width: 100%;  
+    top: 10%; 
+    color: #fff;  
+}
+.team-partner .partner-title h2{
+    color: #fff;
+}
+@media (min-width: 320px) and (max-width: 991px) {
+    .team-partner .partner-title h4 {
+        width: 100%;
+        font-size: .8rem!important;
+    }
+}
+@media (min-width: 577px) and (max-width: 767px) {
+    /* Reason */
+    .reason-item .img {
+        text-align: center;
+    }
+
+    /* Leader */
+    .leader-content > *{
+        padding-bottom: 1.2rem;
+    }
+
+    .leader-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .leader-item .info {
+        text-align: left;
+    }
+
+    .leader-item .social div:first-child i {
+        border-radius: unset;
+    }
+
+    .leader-item .social div:last-child i {
+        display: none;
+    }
+}
+
+@media (min-width: 1920px) {
+    .container {
+        max-width: 1440px;
+    }
+
+}
+@media (max-width: 991px) {
+    .team-wrapper .banner-desc {
+        transform: translate(1rem, 1.5rem);
+        width: 53% !important;
+    }
+    .team-wrapper .col-6:nth-child(2n) {
+        padding-left: 0!important;
+        padding-bottom: 0 !important;
+
+    }
+    .team-wrapper .col-6:nth-child(2n+1) {
+        padding-right: 0!important;
+        padding-bottom: 0 !important;
+
+    }
+    /*.team-wrapper .col-6:nth-child(2n+1) .leader-item{
+        border-right: 0;
+    }*/
+    
+    .team-wrapper .reason-item {
+        display: flex;
+        justify-content: space-between;
+    }
+    .team-wrapper .reason-item img {
+        height: 80% !important;
+        width: 80% !important;
+    }
+    .team-wrapper .reason-item img {
+        padding: 0;
+    }.team-wrapper .reason-item .img {
+        padding: 0;
+    }
+    .team-wrapper .reason-item > div:last-child{
+        width:100%;
+    }
+   
+    .team-partner .partner-title {
+        top: -1.5rem;
+    }
+    .leader {
+        padding-top: 0;
+    }
+    .team-partner .partner-title h2 {
+        margin-top: 3rem;
+    }
+}

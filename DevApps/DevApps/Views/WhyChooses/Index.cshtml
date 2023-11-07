@@ -1,0 +1,483 @@
+﻿@model IEnumerable<DevApps.ModelsView.ModelsNews>
+@{
+    var bannerUs = ViewBag.BannerUs as IEnumerable<DevApps.Models.BANNER>;
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int stt = 1;
+    var count = 1;
+}
+
+
+@if ((int)Session["language"] == 1)
+{
+
+    <section class="reason">
+        @foreach (var item in bannerUs)
+        {
+            if (item.ORDER == 2)
+            {
+                <div class="reason-bn w-100 ">
+                    <img src="@item.IMAGE" alt="wcu" class="w-100" />
+                    <div class="bn-content container">
+                        <div class="bn-h w-75">
+                            <h2>
+                                @item.TITLE
+                            </h2>
+                        </div>
+                        <div class="bn-ct w-50">
+                            <p>
+                                @item.DESCRIPTION
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+
+        @*<div class="reason-bn w-100 ">
+                <img src="~/Content/images/WHY CHOOSE US/Why-choose-us-1.png" alt="wcu" class="w-100" />
+                <div class="bn-content container">
+                    <div class="bn-h w-75">
+                        <h2>
+                            We respond with all Blockchain
+                            solutions for customer issues
+                            and innovation
+                        </h2>
+                    </div>
+                    <div class="bn-ct w-50">
+                        <p>
+                            From system design, development and operation.
+                            Since we are able to consistently carry out all
+                            phases of development, you can consult us about
+                            everything. With application development technology,
+                            IT infrastructure system construction technology, embedded technology,
+                            and advanced technology as the core, we support
+                            IT solutions to solve customer problems.
+                        </p>
+                    </div>
+                </div>
+            </div>*@
+        <div class="container body-wc">
+            @foreach (var item in Model)
+            {
+                if (stt == 1)
+                {
+                    <div class="define ">
+                        <div class="define-h text-center">
+                            <h2>@item.cate.TITLE</h2>
+                        </div>
+                        <div class="define-ct">
+                            @Html.Raw(item.cate.DESCRIPTION)
+                        </div>
+                        <div class="define-items">
+                            <div class="container-fluid ">
+                                <div class="row justify-content-between">
+                                    @foreach (var val in item.news)
+                                    {
+                                        <div class="col-12 col-lg-2">
+                                            <div class="df-item">
+                                                <div class="item-img">
+                                                    <img src="@val.IMAGE" alt="wc" />
+                                                </div>
+                                                <div class="item-title">
+                                                    <p class="text-left">
+                                                        @val.TITLE
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+                if (stt == 2)
+                {
+                    <div class="business">
+                        <div class="business-h">
+                            <h2 class="text-center">@item.cate.TITLE</h2>
+                        </div>
+                        <div class="business-ct">
+                            @foreach (var val in item.news)
+                            {
+                                if (count % 2 != 0)
+                                {
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-lg-6 col-12 ">
+                                                <div class="bn-img">
+                                                    <img src="@val.IMAGE" alt="@val.TITLE" />
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-12 ">
+                                                <div class="bn-item ">
+                                                    <h3>
+                                                        @val.TITLE
+                                                    </h3>
+                                                    <p class="first-text font-italic">
+                                                        @val.SUB_TITLE
+                                                    </p>
+                                                    <div>
+                                                        @Html.Raw(val.DESCRIPTION)
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                                if (count % 2 == 0)
+                                {
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-lg-6 col-12 ">
+                                                <div class="bn-item">
+                                                    <h3>
+                                                        @val.TITLE
+                                                    </h3>
+                                                    <p class="first-text font-italic">
+                                                        @val.SUB_TITLE
+                                                    </p>
+                                                    <div>
+                                                        @Html.Raw(val.DESCRIPTION)
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-12 ">
+                                                <div class="bn-img">
+                                                    <img src="@val.IMAGE" alt="@val.TITLE" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                                count++;
+                            }
+                        </div>
+                    </div>
+                }
+                if (stt == 3)
+                {
+                    <div class="we-can">
+                        <div class="wecan-h">
+                            <h2 class="text-center">
+                                @item.cate.TITLE
+                            </h2>
+                        </div>
+                        <div class="wecan-ct">
+                            <div class="text-center">
+                                @Html.Raw(item.cate.DESCRIPTION)
+                            </div>
+                        </div>
+                        <div class="container-fluid">
+                            <div class="row">
+                                @foreach (var val in item.news)
+                                {
+                                    <div class="col-lg-6 col-12">
+                                        <div class="wc-items">
+                                            <div class="wc-img">
+                                                <img src="@val.IMAGE" alt="@val.TITLE" />
+                                            </div>
+                                            <div class="wecan-detail text-center">
+                                                <h4>@val.TITLE</h4>
+                                                <div>
+                                                    @Html.Raw(val.DESCRIPTION)
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                }
+                            </div>
+                        </div>
+                    </div>
+
+                }
+
+                if (stt == 4)
+                {
+                    <div class="project container-fluid">
+                        <div class="project-h">
+                            <h2 class="text-center">@item.cate.TITLE</h2>
+                        </div>
+
+                        <div class="row d-none d-lg-block">
+                            @foreach (var val in item.news)
+                            {
+                                <div class="col-lg-4 item position-relative">
+                                    <img src="@val.IMAGE" class="w-100" alt="@val.TITLE" />
+                                    <div class="project-ct position-absolute">
+                                        <div class="content-ph text-center">
+                                            <div class="ctph-img">
+                                                <img src="~/Content/images/WHY CHOOSE US/Why-choose-us-4.png" class="" alt="prj" />
+                                            </div>
+                                            <h6>@val.TITLE</h6>
+                                            <div class="text-justify">
+                                                @Html.Raw(val.DESCRIPTION)
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+
+                        <section class="regular slider d-block d-lg-none">
+                            @foreach (var val in item.news)
+                            {
+                                <div>
+                                    <div class=" item position-relative">
+                                        <img src="@val.IMAGE" class="w-100" alt="prj" />
+                                        <div class="project-ct position-absolute">
+                                            <div class="content-ph text-center">
+                                                <div class="ctph-img">
+                                                    <img src="~/Content/images/WHY CHOOSE US/Why-choose-us-4.png" class="" alt="prj" />
+                                                </div>
+                                                <h6>@val.TITLE</h6>
+                                                <div class="text-justify">
+                                                    @Html.Raw(val.DESCRIPTION)
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </section>
+                    </div>
+                }
+                stt++;
+            }
+
+
+
+
+        </div>
+
+    </section>
+
+}
+else
+{
+
+    <section class="reason">
+        @foreach (var item in bannerUs)
+        {
+            if (item.ORDER == 2)
+            {
+                <div class="reason-bn w-100 ">
+                    <img src="@item.IMAGE" alt="wcu" class="w-100" />
+                    <div class="bn-content container">
+                        <div class="bn-h w-75">
+                            <h2>
+                                @item.TITLE_EN
+                            </h2>
+                        </div>
+                        <div class="bn-ct w-50">
+                            <p>
+                                @item.DESCRIPTION_EN
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+
+        <div class="container body-wc">
+            @foreach (var item in Model)
+            {
+                if (stt == 1)
+                {
+                    <div class="define ">
+                        <div class="define-h text-center">
+                            <h2>@item.cate.TITLE_EN</h2>
+                        </div>
+                        <div class="define-ct">
+                            @Html.Raw(item.cate.DESCRIPTION_EN)
+                        </div>
+                        <div class="define-items">
+                            <div class="container-fluid ">
+                                <div class="row justify-content-between">
+                                    @foreach (var val in item.news)
+                                    {
+                                        <div class="col-12 col-lg-2">
+                                            <div class="df-item">
+                                                <div class="item-img">
+                                                    <img src="@val.IMAGE" alt="wc" />
+                                                </div>
+                                                <div class="item-title">
+                                                    <p class="text-left">
+                                                        @val.TITLE_EN
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+                if (stt == 2)
+                {
+                    <div class="business">
+                        <div class="business-h">
+                            <h2 class="text-center">@item.cate.TITLE_EN</h2>
+                        </div>
+                        <div class="business-ct">
+                            @foreach (var val in item.news)
+                            {
+                                if (count % 2 != 0)
+                                {
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-lg-6 col-12 ">
+                                                <div class="bn-img">
+                                                    <img src="@val.IMAGE" alt="@val.TITLE_EN" />
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-12 ">
+                                                <div class="bn-item ">
+                                                    <h3>
+                                                        @val.TITLE_EN
+                                                    </h3>
+                                                    <p class="first-text font-italic">
+                                                        @val.SUB_TITLE_EN
+                                                    </p>
+                                                    <p>
+                                                        @Html.Raw(val.DESCRIPTION_EN)
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                                if (count % 2 == 0)
+                                {
+                                    <div class="container-fluid">
+                                        <div class="row">
+                                            <div class="col-lg-6 col-12 ">
+                                                <div class="bn-item">
+                                                    <h3>
+                                                        @val.TITLE_EN
+                                                    </h3>
+                                                    <p class="first-text font-italic">
+                                                        @val.SUB_TITLE_EN
+                                                    </p>
+                                                    <p>
+                                                        @Html.Raw(val.DESCRIPTION_EN)
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-12 ">
+                                                <div class="bn-img">
+                                                    <img src="@val.IMAGE" alt="@val.TITLE_EN" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                                count++;
+                            }
+                        </div>
+                    </div>
+                }
+                if (stt == 3)
+                {
+                    <div class="we-can">
+                        <div class="wecan-h">
+                            <h2 class="text-center">
+                                @item.cate.TITLE_EN
+                            </h2>
+                        </div>
+                        <div class="wecan-ct">
+                            <div class="text-center">
+                                @Html.Raw(item.cate.DESCRIPTION_EN)
+                            </div>
+                        </div>
+                        <div class="container-fluid">
+                            <div class="row">
+                                @foreach (var val in item.news)
+                                {
+                                    <div class="col-lg-6 col-12">
+                                        <div class="wc-items">
+                                            <div class="wc-img">
+                                                <img src="@val.IMAGE" alt="@val.TITLE_EN" />
+                                            </div>
+                                            <div class="wecan-detail text-center">
+                                                <h4>@val.TITLE_EN</h4>
+                                                <p>
+                                                    @Html.Raw(val.DESCRIPTION_EN)
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                }
+                            </div>
+                        </div>
+                    </div>
+
+                }
+
+                if (stt == 4)
+                {
+                    <div class="project container-fluid">
+                        <div class="project-h">
+                            <h2 class="text-center">@item.cate.TITLE_EN</h2>
+                        </div>
+
+                        <div class="row d-none d-lg-block">
+                            @foreach (var val in item.news)
+                            {
+                                <div class="col-lg-4 item position-relative">
+                                    <img src="@val.IMAGE" class="w-100" alt="@val.TITLE_EN" />
+                                    <div class="project-ct position-absolute">
+                                        <div class="content-ph text-center">
+                                            <div class="ctph-img">
+                                                <img src="~/Content/images/WHY CHOOSE US/Why-choose-us-4.png" class="" alt="prj" />
+                                            </div>
+                                            <h6>@val.TITLE_EN</h6>
+                                            <p class="text-justify">
+                                                @Html.Raw(val.DESCRIPTION_EN)
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+
+                        <section class="regular slider d-block d-lg-none">
+                            @foreach (var val in item.news)
+                            {
+                                <div>
+                                    <div class=" item position-relative">
+                                        <img src="@val.IMAGE" class="w-100" alt="prj" />
+                                        <div class="project-ct position-absolute">
+                                            <div class="content-ph text-center">
+                                                <div class="ctph-img">
+                                                    <img src="~/Content/images/WHY CHOOSE US/Why-choose-us-4.png" class="" alt="prj" />
+                                                </div>
+                                                <h6>@val.TITLE_EN</h6>
+                                                <p class="text-justify">
+                                                    @Html.Raw(val.DESCRIPTION_EN)
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </section>
+                    </div>
+                }
+                stt++;
+            }
+
+
+
+
+        </div>
+
+    </section>
+
+}
